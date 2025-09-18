@@ -197,6 +197,17 @@ _test-examples: _ensure_examples_output
     --output-directory examples/output \
     --schema {{source_schema_path}} > examples/output/README.md
 
+# Test example files against the schema
+[group('model development')]
+test-examples: _ensure_examples_output
+  uv run linkml-run-examples \
+    --input-formats yaml \
+    --output-formats yaml \
+    --counter-example-input-directory tests/data/invalid \
+    --input-directory tests/data/valid \
+    --output-directory examples/output \
+    --schema {{source_schema_path}} > examples/output/README.md
+
 # Generate merged model
 _gen-yaml:
   -mkdir -p docs/schema
