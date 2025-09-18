@@ -53,3 +53,6 @@ jobs:
 
       - name: Run test suite
         run: just test
+
+      - name: Test example files
+        run: just test-examples
