@@ -1,0 +1,71 @@
+# Example plant tissue sample - Sorghum root tissue
+seq_project_id: 12345
+seq_project_name: "Sorghum drought stress transcriptome"
+sample_id: 100001
+seq_project_pi_name: "Dr. Jane Smith"
+sample_contact_name: "John Doe"
+tissue_contact_name: "Jane Plant"
+proposal_id: 98765
+
+# Sample logistics
+tube_or_plate_label: "SB_roots_A"
+sample_container: "tube"
+plate_location: "A1"
+biosafety_material_category: "Plant"
+sample_name: "sorghum_root_drought_1"
+biological_replicate_sample_group_name: "sorghum_drought_roots"
+combined_tissue_description: "5 lateral root tips from single plant"
+
+# Experimental design
+experimental_time_point_number: 1
+experimental_time_point_description: "7 days post drought initiation"
+
+# Taxonomy
+genus: "Sorghum"
+species: "bicolor"
+strain_variety_or_cultivar: "RTx430"
+isolate: "SB_line1"
+germplasm_collection_and_id: "GRIN PI 123456"
+ncbi_taxonomy_id: 4558
+ancestral_data: "Pure line breeding from landrace"
+estimated_genome_size_mb: 730
+gc_content_percent: 45
+ploidy: "diploid [PATO:0001374]"
+reference_genome: "Phytozome Sorghum bicolor RTx430 v3.1"
+
+# Collection and location
+collection_date_and_time: "2024-08-15T10:30:00-07:00"
+sample_size: "0.5 g"
+tissue: "5 mm lateral root tips"
+tissue_plant_ontology_term: "root tip [PO:0000025]"
+geographic_location_region_and_locality: "USA: California, Davis"
+geographic_location_latitude: 38.544
+geographic_location_longitude: -121.740
+depth_meters: "0.1 m"
+elevation_meters: "20 m"
+temperature_celsius: "24 degree Celsius"
+broad_scale_environmental_context: "agricultural biome [ENVO:01000247]"
+local_environmental_context: "greenhouse [ENVO:01000253]"
+environmental_medium: "potting soil [ENVO:00005789]"
+
+# Growth conditions
+growth_facility: "greenhouse"
+growth_medium: "soil"
+growth_medium_composition: "3:1:1 mix of peat moss, vermiculite, and perlite"
+plant_age: "45 days post germination"
+developmental_stage: "vegetative"
+
+# Treatment regimens
+air_temperature_regimen: "28°C day / 22°C night, 12h photoperiod"
+watering_regimen: "50 ml every 2 days until drought treatment, then withheld for 7 days"
+light_regimen: "200 μmol m-2 s-1 PPFD, 12h light / 12h dark"
+last_light_transition_type: "lights on"
+time_after_last_light_transition: "4:00"
+fertilizer_administration: "1x Hoagland's solution, weekly"
+perturbation: "drought stress by withholding water for 7 days"
+
+# Sample processing
+sample_material_processing: "roots rinsed with distilled water, patted dry, flash frozen in liquid nitrogen"
+sample_storage_temperature_celsius: "-80"
+sample_preservation_method: "N2 Freeze"
+harvest_to_preservation_time: "3"

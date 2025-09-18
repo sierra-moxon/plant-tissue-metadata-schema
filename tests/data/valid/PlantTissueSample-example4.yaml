@@ -1,0 +1,63 @@
+# Example plant tissue sample - Rice grain with salt stress
+seq_project_id: 22222
+seq_project_name: "Rice grain development under salt stress"
+sample_id: 400004
+seq_project_pi_name: "Dr. Yuki Tanaka"
+sample_contact_name: "Emma Brown"
+tissue_contact_name: "Alex Grain"
+
+# Sample logistics
+tube_or_plate_label: "OS_grains_D"
+sample_container: "plate"
+plate_location: "D4"
+biosafety_material_category: "Plant"
+sample_name: "rice_grain_salt_stressed_4"
+biological_replicate_sample_group_name: "rice_salt_stress_grains"
+combined_tissue_description: "10 developing grains at milk stage"
+
+# Experimental design
+experimental_time_point_number: 4
+experimental_time_point_description: "milk stage, 14 days post anthesis"
+
+# Taxonomy
+genus: "Oryza"
+species: "sativa"
+strain_variety_or_cultivar: "Nipponbare"
+ncbi_taxonomy_id: 4530
+estimated_genome_size_mb: 430
+gc_content_percent: 44
+ploidy: "diploid [PATO:0001374]"
+reference_genome: "IRGSP Oryza sativa ssp. japonica cv. Nipponbare IRGSP-1.0"
+
+# Collection and location
+collection_date_and_time: "2024-06-30T16:20:00+09:00"
+sample_size: "0.3 g"
+tissue: "developing grain at milk stage"
+tissue_plant_ontology_term: "seed [PO:0009010]"
+geographic_location_region_and_locality: "Japan: Ibaraki, Tsukuba"
+geographic_location_latitude: 36.084
+geographic_location_longitude: 140.076
+elevation_meters: "25"
+temperature_celsius: "28"
+broad_scale_environmental_context: "agricultural biome [ENVO:01000247]"
+local_environmental_context: "rice paddy [ENVO:00000121]"
+environmental_medium: "paddy soil [ENVO:00002262]"
+
+# Growth conditions
+growth_facility: "irrigated field"
+growth_medium: "soil"
+growth_medium_composition: "clay loam paddy soil, pH 6.5, organic matter 3.2%"
+plant_age: "90 days post germination"
+developmental_stage: "reproductive"
+
+# Treatment regimens
+salt_regimen: "150 mM NaCl in irrigation water applied from panicle initiation stage"
+watering_regimen: "flooded conditions maintained throughout growing season"
+fertilizer_administration: "NPK fertilizer applied as basal and top dressing according to standard practice"
+temperature_celsius: "28"
+
+# Sample processing
+sample_material_processing: "grains removed from panicles, hulls removed, immediately frozen"
+sample_storage_temperature_celsius: "-80"
+sample_preservation_method: "N2 Freeze"
+harvest_to_preservation_time: "5"

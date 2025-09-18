@@ -1,0 +1,34 @@
+# Minimal required fields example - basic plant sample
+seq_project_id: 99999
+seq_project_name: "Basic plant sample project"
+sample_id: 500005
+seq_project_pi_name: "Dr. Test User"
+
+# Required sample logistics
+tube_or_plate_label: "MIN_test_1"
+sample_container: "tube"
+plate_location: "A1"
+biosafety_material_category: "Plant"
+sample_name: "minimal_plant_sample"
+
+# Required taxonomy
+genus: "Arabidopsis"
+species: "thaliana"
+strain_variety_or_cultivar: "Col-0"
+ncbi_taxonomy_id: 3702
+reference_genome: "TAIR10"
+
+# Required collection info
+collection_date_and_time: "2024-01-01T12:00:00Z"
+sample_size: "0.1 g"
+tissue: "leaf"
+
+# Required growth conditions
+growth_facility: "greenhouse"
+growth_medium: "soil"
+plant_age: "30 days"
+developmental_stage: "rosette"
+
+# Required sample processing
+sample_storage_temperature_celsius: "-80"
+sample_preservation_method: "N2 Freeze"

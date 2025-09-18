@@ -1,0 +1,69 @@
+# Example plant tissue sample - Arabidopsis leaf tissue with pathogen infection
+seq_project_id: 67890
+seq_project_name: "Arabidopsis pathogen response RNA-seq"
+sample_id: 200002
+seq_project_pi_name: "Dr. Maria Rodriguez"
+sample_contact_name: "Sarah Johnson"
+tissue_contact_name: "Mike Leaf"
+proposal_id: 54321
+
+# Sample logistics
+tube_or_plate_label: "AT_leaves_B"
+sample_container: "plate"
+plate_location: "B2"
+biosafety_material_category: "Plant"
+sample_name: "arabidopsis_leaf_infected_2"
+biological_replicate_sample_group_name: "arabidopsis_pathogen_response"
+combined_tissue_description: "3 fully expanded leaves from single plant"
+
+# Experimental design
+experimental_time_point_number: 2
+experimental_time_point_description: "24 hours post inoculation"
+
+# Taxonomy
+genus: "Arabidopsis"
+species: "thaliana"
+strain_variety_or_cultivar: "Col-0"
+germplasm_collection_and_id: "ABRC CS22660"
+ncbi_taxonomy_id: 3702
+ploidy: "diploid [PATO:0001374]"
+reference_genome: "TAIR Arabidopsis thaliana Col-0 TAIR10"
+
+# Collection and location
+collection_date_and_time: "2024-09-10T14:15:00-04:00"
+sample_size: "0.1 g"
+tissue: "fully expanded rosette leaves"
+tissue_plant_ontology_term: "rosette leaf [PO:0009006]"
+geographic_location_region_and_locality: "USA: Massachusetts, Cambridge"
+geographic_location_latitude: 42.360
+geographic_location_longitude: -71.092
+elevation_meters: "10"
+temperature_celsius: "22"
+broad_scale_environmental_context: "laboratory environment [ENVO:01000253]"
+local_environmental_context: "growth chamber [ENVO:01000253]"
+environmental_medium: "agar medium [ENVO:00010505]"
+
+# Growth conditions
+growth_facility: "growth chamber"
+growth_medium: "in vitro solid culture medium"
+growth_medium_composition: "1x Murashige & Skoog medium with 1% sucrose, 0.8% agar"
+plant_age: "21 days post germination"
+developmental_stage: "rosette"
+
+# Treatment regimens
+air_temperature_regimen: "22°C constant"
+biotic_regimen: "Pseudomonas syringae pv. tomato DC3000 infiltration"
+inoculation_method: "syringe infiltration with bacterial suspension (OD600=0.0002)"
+time_post_inoculation: "24:00:00"
+light_regimen: "120 μmol m-2 s-1, 16h light / 8h dark"
+humidity_regimen: "70% RH constant"
+
+# Biological characteristics
+sample_disease_status: "bacterial infection with Pseudomonas syringae pv. tomato DC3000"
+sample_disease_stage: "infection"
+
+# Sample processing
+sample_material_processing: "leaves detached, immediately flash frozen in liquid nitrogen"
+sample_storage_temperature_celsius: "-80"
+sample_preservation_method: "N2 Freeze"
+harvest_to_preservation_time: "1"
