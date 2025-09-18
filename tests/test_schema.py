@@ -27,8 +27,7 @@ def test_schema_loads():
         "ncbi_taxonomy_id"
     ]
     
-    class_slots = view.class_slots("PlantTissueSample")
-    class_slot_names = [slot.name for slot in class_slots]
+    class_slot_names = view.class_slots("PlantTissueSample")
     
     for required_slot in required_slots:
         assert required_slot in class_slot_names, f"Required slot {required_slot} not found in class"
@@ -41,9 +40,10 @@ def test_required_fields():
     
     # Get required slots for PlantTissueSample
     required_slots = []
-    for slot in view.class_slots("PlantTissueSample"):
+    for slot_name in view.class_slots("PlantTissueSample"):
+        slot = view.get_slot(slot_name)
         if slot.required:
-            required_slots.append(slot.name)
+            required_slots.append(slot_name)
     
     # Should have some required fields
     assert len(required_slots) > 0, "No required fields found"

@@ -1,5 +1,5 @@
 # Auto generated from plant_tissue_metadata_schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-09-18T16:09:57
+# Generation date: 2025-09-18T16:13:04
 # Schema: plant-tissue-metadata-schema
 #
 # id: https://w3id.org/plant-tissue-metadata-schema
