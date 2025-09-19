@@ -1,710 +1,978 @@
-id: https://w3id.org/plant-tissue-metadata-schema
 name: plant-tissue-metadata-schema
+description: 'A LinkML schema for capturing metadata about plant tissue samples, including
+  experimental conditions,
+
+  treatments, and sample processing information. Designed for compatibility with MIXS
+  standards.'
 title: Plant Tissue Metadata Schema
-description: |-
-  A LinkML schema for capturing metadata about plant tissue samples, including experimental conditions,
-  treatments, and sample processing information. Designed for compatibility with MIXS standards.
-license: MIT
 see_also:
-  - https://github.com/GenomicsStandardsConsortium/mixs
-
+- https://github.com/GenomicsStandardsConsortium/mixs
+id: https://w3id.org/plant-tissue-metadata-schema
+imports:
+- linkml:types
+license: MIT
 prefixes:
-  linkml: https://w3id.org/linkml/
-  plant_tissue: https://w3id.org/plant-tissue-metadata-schema/
-  mixs: https://w3id.org/mixs/
-  po: http://purl.obolibrary.org/obo/PO_
-  envo: http://purl.obolibrary.org/obo/ENVO_
-  pato: http://purl.obolibrary.org/obo/PATO_
-  orcid: https://orcid.org/
-
+  linkml:
+    prefix_prefix: linkml
+    prefix_reference: https://w3id.org/linkml/
+  plant_tissue:
+    prefix_prefix: plant_tissue
+    prefix_reference: https://w3id.org/plant-tissue-metadata-schema/
+  MIXS:
+    prefix_prefix: MIXS
+    prefix_reference: https://w3id.org/mixs/
+  PO:
+    prefix_prefix: PO
+    prefix_reference: http://purl.obolibrary.org/obo/PO_
+  ENVO:
+    prefix_prefix: ENVO
+    prefix_reference: http://purl.obolibrary.org/obo/ENVO_
+  PATO:
+    prefix_prefix: PATO
+    prefix_reference: http://purl.obolibrary.org/obo/PATO_
+  ORCID:
+    prefix_prefix: ORCID
+    prefix_reference: http://identifiers.org/orcid/
 default_prefix: plant_tissue
 default_range: string
-
-imports:
-  - linkml:types
-
+slots:
+  seq_project_id:
+    name: seq_project_id
+    description: Project identifier, prefilled
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000092
+    domain_of:
+    - PlantTissueSample
+    range: integer
+    required: true
+  seq_project_name:
+    name: seq_project_name
+    description: Name of the project within which the sequencing was organized
+    examples:
+    - value: Forest soil metagenome
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000092
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  sample_id:
+    name: sample_id
+    description: Unique identifier assigned to a material sample
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000026
+    domain_of:
+    - PlantTissueSample
+    range: integer
+    required: true
+  seq_project_pi_name:
+    name: seq_project_pi_name
+    description: Principal investigator name for the sequencing project
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  sample_contact_name:
+    name: sample_contact_name
+    description: Contact person for the sample
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+  tissue_contact_name:
+    name: tissue_contact_name
+    description: Contact person for tissue-related questions
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+  proposal_id:
+    name: proposal_id
+    description: Proposal identifier
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: integer
+  tube_or_plate_label:
+    name: tube_or_plate_label
+    description: Must be unique across all tubes and plates, and <20 characters
+    examples:
+    - value: Sb_roots1
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  sample_container:
+    name: sample_container
+    description: Select tube or plate
+    examples:
+    - value: tube
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  plate_location:
+    name: plate_location
+    description: Required if samples provided in a plate. for partial plates, fill
+      by columns
+    examples:
+    - value: B1
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  biosafety_material_category:
+    name: biosafety_material_category
+    description: Choose from Algae, Animal, Archaea, Bacteria, Fungi, Plant, Plasmid,
+      Protist, Virus, Synthetic Construct
+    examples:
+    - value: Plant
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  sample_name:
+    name: sample_name
+    description: A local identifier or name for the material sample
+    examples:
+    - value: sbicolor_3d_root_1-1
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0001107
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  biological_replicate_sample_group_name:
+    name: biological_replicate_sample_group_name
+    description: Samples that are biological replicates should have the same group
+      name
+    examples:
+    - value: sbicolor_3d_root
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+  combined_tissue_description:
+    name: combined_tissue_description
+    description: The number and relationship between tissues if multiple tissue samples
+      were combined
+    examples:
+    - value: 6 lateral root tips from each of two plants
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+  experimental_time_point_number:
+    name: experimental_time_point_number
+    description: Integer number representing the sequential numbering of time points
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: integer
+  experimental_time_point_description:
+    name: experimental_time_point_description
+    description: Description of the time point sampled
+    examples:
+    - value: 3 days post germination
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+  genus:
+    name: genus
+    description: Genus of the primary organism being sampled
+    examples:
+    - value: Sorghum
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000029
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  species:
+    name: species
+    description: Species of the primary organism being sampled
+    examples:
+    - value: bicolor
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000029
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  strain_variety_or_cultivar:
+    name: strain_variety_or_cultivar
+    description: Name or ID of the cultivar, variety, strain, or other similar designation
+    examples:
+    - value: RTx430
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0001318
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  isolate:
+    name: isolate
+    description: Isolate or mutant name
+    examples:
+    - value: Sb_Mut1
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+  germplasm_collection_and_id:
+    name: germplasm_collection_and_id
+    description: Culture collection name and ID from which the original plant germplasm
+      was sourced
+    examples:
+    - value: ABRC CS22561
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+  ncbi_taxonomy_id:
+    name: ncbi_taxonomy_id
+    description: Unique identifier from the NCBI taxonomy database
+    examples:
+    - value: '4558'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000250
+    domain_of:
+    - PlantTissueSample
+    range: integer
+    required: true
+  ancestral_data:
+    name: ancestral_data
+    description: Information about either pedigree or other description of ancestral
+      information
+    examples:
+    - value: Hybrid of A x B lines
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000247
+    domain_of:
+    - PlantTissueSample
+    range: string
+  genetic_modification:
+    name: genetic_modification
+    description: Genetic modifications of the genome of an organism
+    examples:
+    - value: mlo-11 allele
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000859
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^{PMID}|{DOI}|{URL}$
+  estimated_genome_size_mb:
+    name: estimated_genome_size_mb
+    description: Estimated genome size of the primary species being sampled, between
+      1-100000
+    examples:
+    - value: '730'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: integer
+  gc_content_percent:
+    name: gc_content_percent
+    description: Estimated GC content of the genome of the primary species being sampled
+    examples:
+    - value: '45'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: integer
+  ploidy:
+    name: ploidy
+    description: The ploidy level of the genome
+    examples:
+    - value: diploid
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000021
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^([^\s-]{1,2}|[^\s-]+.+[^\s-]+) \[[a-zA-Z]{2,}:[a-zA-Z0-9]\d+\]$
+  reference_genome:
+    name: reference_genome
+    description: Reference genome and annotation to be used for analysis
+    examples:
+    - value: Phytozome Sorghum bicolor RTx430 v2.1
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  collection_date_and_time:
+    name: collection_date_and_time
+    description: The time of sampling, either as an instance or interval
+    examples:
+    - value: '2025-08-10T14:00:00-07:00'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000011
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  sample_size:
+    name: sample_size
+    description: The total amount or size of sample collected
+    examples:
+    - value: 0.45 g
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000001
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  tissue:
+    name: tissue
+    description: Detailed description of the organ or type of tissue sampled
+    examples:
+    - value: 5 mm lateral root tips
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  tissue_plant_ontology_term:
+    name: tissue_plant_ontology_term
+    description: Plant ontology term corresponding to plant structure sampled
+    examples:
+    - value: seedling cotyledon (PO:0025471);  seedling hypocotyl (PO:0025291)
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0001060
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^([^\s-]{1,2}|[^\s-]+.+[^\s-]+) \[[a-zA-Z]{2,}:[a-zA-Z0-9]\d+\]$
+  geographic_location_region_and_locality:
+    name: geographic_location_region_and_locality
+    description: The geographical origin of the sample as defined by country or sea
+      name followed by specific region name
+    examples:
+    - value: 'USA: California, Berkeley'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000010
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: '^([^\s-]{1,2}|[^\s-]+.+[^\s-]+): ([^\s-]{1,2}|[^\s-]+.+[^\s-]+), ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$'
+  geographic_location_latitude:
+    name: geographic_location_latitude
+    description: The geographical origin of the sample as defined by latitude
+    examples:
+    - value: '37.877184'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000009
+    domain_of:
+    - PlantTissueSample
+    range: float
+  geographic_location_longitude:
+    name: geographic_location_longitude
+    description: The geographical origin of the sample as defined by longitude
+    examples:
+    - value: '-122.250841'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000009
+    domain_of:
+    - PlantTissueSample
+    range: float
+  depth_meters:
+    name: depth_meters
+    description: The vertical distance (in meters) below local surface
+    examples:
+    - value: '0.1'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000018
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  elevation_meters:
+    name: elevation_meters
+    description: Elevation (in meters) of the sampling site as measured by the vertical
+      distance from mean sea level
+    examples:
+    - value: '120'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000093
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  temperature_celsius:
+    name: temperature_celsius
+    description: Temperature (in degrees Celsius) of the sample at time of sampling
+    examples:
+    - value: '22'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000113
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  broad_scale_environmental_context:
+    name: broad_scale_environmental_context
+    description: The major environmental system the sample or specimen came from
+    examples:
+    - value: rangeland biome [ENVO:01000247]
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000012
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^([^\s-]{1,2}|[^\s-]+.+[^\s-]+) \[[a-zA-Z]{2,}:[a-zA-Z0-9]\d+\]$
+  local_environmental_context:
+    name: local_environmental_context
+    description: The entity or entities in the sample's local vicinity
+    examples:
+    - value: hillside [ENVO:01000333]
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000013
+    domain_of:
+    - PlantTissueSample
+    range: string
+  environmental_medium:
+    name: environmental_medium
+    description: The environmental material(s) immediately surrounding the sample
+      at time of sampling
+    examples:
+    - value: bluegrass field soil [ENVO:00005789]
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000014
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^([^\s-]{1,2}|[^\s-]+.+[^\s-]+) \[[a-zA-Z]{2,}:[a-zA-Z0-9]\d+\]$
+  growth_facility:
+    name: growth_facility
+    description: Type of facility where the sampled plant was grown
+    examples:
+    - value: greenhouse
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0001043
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  growth_medium:
+    name: growth_medium
+    description: General specification of the media for growing the plants or tissue
+      cultured samples
+    examples:
+    - value: soil
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0001057
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  growth_medium_composition:
+    name: growth_medium_composition
+    description: Detailed description of the makeup of the plant growth medium
+    examples:
+    - value: 2:1:1 mix of coco coir, sand, and vermiculite
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+  plant_age:
+    name: plant_age
+    description: The age of the plant from which the tissue was sampled
+    examples:
+    - value: 3 days post germination
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000255
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  developmental_stage:
+    name: developmental_stage
+    description: The developmental stage of the plant from which the tissue was sampled
+    examples:
+    - value: seedling
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000251
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  air_temperature_regimen:
+    name: air_temperature_regimen
+    description: Information about treatment involving an exposure to varying temperatures
+    examples:
+    - value: 22�C 12h day / 18�C 12h night
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000551
+    domain_of:
+    - PlantTissueSample
+    range: string
+  antibiotic_regimen:
+    name: antibiotic_regimen
+    description: Information about treatment involving antibiotic administration
+    examples:
+    - value: kanamycin 50 ug/mL added to agar plates for the full duration of growth
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000553
+    domain_of:
+    - PlantTissueSample
+    range: string
+  biotic_regimen:
+    name: biotic_regimen
+    description: Information about treatment involving use of biotic factors
+    examples:
+    - value: Agrobacterium tumefaciens GV3101 infiltration
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0001038
+    domain_of:
+    - PlantTissueSample
+    range: string
+  inoculation_method:
+    name: inoculation_method
+    description: Method and material used for inoculation or infiltration with a biotic
+      agent
+    examples:
+    - value: syringe infiltration with GV3101 (OD600=0.5) carrying pCAMBIA1300-35S::GFP
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+  time_post_inoculation:
+    name: time_post_inoculation
+    description: The time between inoculation with the biotic agent and sample collection
+    examples:
+    - value: '2:12:00'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+  chemical_administration:
+    name: chemical_administration
+    description: List of chemical compounds administered to the host or site where
+      sampling occurred
+    examples:
+    - value: 50 mM KNO3 fertilizer, weekly
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000751
+    domain_of:
+    - PlantTissueSample
+    range: string
+  chemical_mutagen:
+    name: chemical_mutagen
+    description: Treatment involving use of mutagens
+    examples:
+    - value: seeds soaked in EMS, 0.1%, 6h exposure before planting
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000555
+    domain_of:
+    - PlantTissueSample
+    range: string
+  fertilizer_administration:
+    name: fertilizer_administration
+    description: Information about treatment involving the use of fertilizers
+    examples:
+    - value: 0.5x Hoagland's solution, weekly
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000556
+    domain_of:
+    - PlantTissueSample
+    range: string
+  insecticide_regimen:
+    name: insecticide_regimen
+    description: Information about treatment involving use of insecticides
+    examples:
+    - value: imidacloprid, 0.5 mg/L, soil drench at time of planting
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000573
+    domain_of:
+    - PlantTissueSample
+    range: string
+  fungicide_regimen:
+    name: fungicide_regimen
+    description: Information about treatment involving use of fungicides
+    examples:
+    - value: azoxystrobin, 100 ppm, foliar spray once at weeks 2, 3, and 4
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000557
+    domain_of:
+    - PlantTissueSample
+    range: string
+  gaseous_environment:
+    name: gaseous_environment
+    description: Use of conditions with differing gaseous environments
+    examples:
+    - value: elevated CO2, 600 ppm, continuous
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000558
+    domain_of:
+    - PlantTissueSample
+    range: string
+  growth_hormone_regimen:
+    name: growth_hormone_regimen
+    description: Information about treatment involving use of growth hormones
+    examples:
+    - value: IAA 1 �M for 24h at 6 days old, followed by transfer to control condition
+        without hormone for 48h before sampling
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000560
+    domain_of:
+    - PlantTissueSample
+    range: string
+  herbicide_regimen:
+    name: herbicide_regimen
+    description: Information about treatment involving use of herbicides
+    examples:
+    - value: glyphosate 10 �M, foliar spray, once at 2 weeks
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000561
+    domain_of:
+    - PlantTissueSample
+    range: string
+  humidity_regimen:
+    name: humidity_regimen
+    description: Information about treatment involving an exposure to varying degree
+      of humidity
+    examples:
+    - value: 65% RH, constant
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000568
+    domain_of:
+    - PlantTissueSample
+    range: string
+  radiation_regimen:
+    name: radiation_regimen
+    description: Information about treatment involving exposure to a particular radiation
+      regimen
+    examples:
+    - value: UV-B 1.5 W/m2, 2h/day, for 5 days starting at day 7
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000575
+    domain_of:
+    - PlantTissueSample
+    range: string
+  light_regimen:
+    name: light_regimen
+    description: Information about treatment involving an exposure to light
+    examples:
+    - value: 150 �mol m-2 s-1, 16h light / 8h dark
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000569
+    domain_of:
+    - PlantTissueSample
+    range: string
+  last_light_transition_type:
+    name: last_light_transition_type
+    description: The most recent light transition before sampling
+    examples:
+    - value: lights on
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+  time_after_last_light_transition:
+    name: time_after_last_light_transition
+    description: The time between sampling and the most recent light transition
+    examples:
+    - value: '2:00'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+  salt_regimen:
+    name: salt_regimen
+    description: Information about treatment involving use of salts as supplement
+    examples:
+    - value: NaCl 100 mM added to hydroponic medium at day 3, followed by transfer
+        to fresh hydroponic medium without elevated NaCl for 3 days before sampling
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000582
+    domain_of:
+    - PlantTissueSample
+    range: string
+  rainfall_regimen:
+    name: rainfall_regimen
+    description: Information about treatment involving an exposure to a given amount
+      of rainfall
+    examples:
+    - value: 30cm of rainfall during growing season
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000576
+    domain_of:
+    - PlantTissueSample
+    range: string
+  watering_regimen:
+    name: watering_regimen
+    description: Information about treatment involving an exposure to watering frequencies
+    examples:
+    - value: 100 ml per pot every 3 days
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000591
+    domain_of:
+    - PlantTissueSample
+    range: string
+  other_treatment_regimen:
+    name: other_treatment_regimen
+    description: Information about treatments not captured by other available treatment
+      categories
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+  perturbation:
+    name: perturbation
+    description: Type of perturbation coupled with perturbation regimen
+    examples:
+    - value: drought stress beginning at 8 weeks for a period of 4 weeks
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000754
+    domain_of:
+    - PlantTissueSample
+    range: string
+  mechanical_damage:
+    name: mechanical_damage
+    description: Information about any mechanical damage exerted on the plant
+    examples:
+    - value: root wounding, 24h before sampling
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0001052
+    domain_of:
+    - PlantTissueSample
+    range: string
+  observed_host_symbionts:
+    name: observed_host_symbionts
+    description: The taxonomic name of organism(s) found living in symbiosis with
+      the specific host
+    examples:
+    - value: arbuscular mycorrhizal fungi
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0001298
+    domain_of:
+    - PlantTissueSample
+    range: string
+  plant_sex:
+    name: plant_sex
+    description: Sex of the reproductive parts on the whole plant
+    examples:
+    - value: hermaphrodite
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0001059
+    domain_of:
+    - PlantTissueSample
+    range: string
+  sample_disease_status:
+    name: sample_disease_status
+    description: List of diseases with which the subject has been diagnosed at time
+      of sample collection
+    examples:
+    - value: infection with Pseudomonas syringae pv. tomato DC3000
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000031
+    domain_of:
+    - PlantTissueSample
+    range: string
+  sample_disease_stage:
+    name: sample_disease_stage
+    description: Stage of the disease at the time of sample collection
+    examples:
+    - value: infection
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000249
+    domain_of:
+    - PlantTissueSample
+    range: string
+  sample_material_processing:
+    name: sample_material_processing
+    description: A brief description of any processing applied to the sample
+    examples:
+    - value: roots were removed from pots rinsed with tap water before flash freezing
+        with liquid nitrogen
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000016
+    domain_of:
+    - PlantTissueSample
+    range: string
+  sample_storage_temperature_celsius:
+    name: sample_storage_temperature_celsius
+    description: Temperature at which sample was stored (in degrees Celsius)
+    examples:
+    - value: '-80'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - MIXS:0000110
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  sample_preservation_method:
+    name: sample_preservation_method
+    description: The method employed for preserving or fixing the tissue
+    examples:
+    - value: N2 Freeze
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  harvest_to_preservation_time:
+    name: harvest_to_preservation_time
+    description: The time between sampling and sample preservation, minutes
+    examples:
+    - value: '15'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    domain_of:
+    - PlantTissueSample
+    range: string
 classes:
   PlantTissueSample:
+    name: PlantTissueSample
     description: A sample of plant tissue with associated metadata
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
     slots:
-      - seq_project_id
-      - seq_project_name
-      - sample_id
-      - seq_project_pi_name
-      - sample_contact_name
-      - tissue_contact_name
-      - proposal_id
-      - tube_or_plate_label
-      - sample_container
-      - plate_location
-      - biosafety_material_category
-      - sample_name
-      - biological_replicate_sample_group_name
-      - combined_tissue_description
-      - experimental_time_point_number
-      - experimental_time_point_description
-      - genus
-      - species
-      - strain_variety_or_cultivar
-      - isolate
-      - germplasm_collection_and_id
-      - ncbi_taxonomy_id
-      - ancestral_data
-      - genetic_modification
-      - estimated_genome_size_mb
-      - gc_content_percent
-      - ploidy
-      - reference_genome
-      - collection_date_and_time
-      - sample_size
-      - tissue
-      - tissue_plant_ontology_term
-      - geographic_location_region_and_locality
-      - geographic_location_latitude
-      - geographic_location_longitude
-      - depth_meters
-      - elevation_meters
-      - temperature_celsius
-      - broad_scale_environmental_context
-      - local_environmental_context
-      - environmental_medium
-      - growth_facility
-      - growth_medium
-      - growth_medium_composition
-      - plant_age
-      - developmental_stage
-      - air_temperature_regimen
-      - antibiotic_regimen
-      - biotic_regimen
-      - inoculation_method
-      - time_post_inoculation
-      - chemical_administration
-      - chemical_mutagen
-      - fertilizer_administration
-      - insecticide_regimen
-      - fungicide_regimen
-      - gaseous_environment
-      - growth_hormone_regimen
-      - herbicide_regimen
-      - humidity_regimen
-      - radiation_regimen
-      - light_regimen
-      - last_light_transition_type
-      - time_after_last_light_transition
-      - salt_regimen
-      - rainfall_regimen
-      - watering_regimen
-      - other_treatment_regimen
-      - perturbation
-      - mechanical_damage
-      - observed_host_symbionts
-      - plant_sex
-      - sample_disease_status
-      - sample_disease_stage
-      - sample_material_processing
-      - sample_storage_temperature_celsius
-      - sample_preservation_method
-      - harvest_to_preservation_time
-
-slots:
-  # Administrative fields
-  seq_project_id:
-    description: Project identifier, prefilled
-    range: integer
-    required: true
-    exact_mappings:
-      - mixs:0000092
-
-  seq_project_name:
-    description: Name of the project within which the sequencing was organized
-    range: string
-    required: true
-    examples:
-      - value: "Forest soil metagenome"
-    exact_mappings:
-      - mixs:0000092
-
-  sample_id:
-    description: Unique identifier assigned to a material sample
-    range: integer
-    required: true
-    exact_mappings:
-      - mixs:0000026
-
-  seq_project_pi_name:
-    description: Principal investigator name for the sequencing project
-    range: string
-    required: true
-
-  sample_contact_name:
-    description: Contact person for the sample
-    range: string
-
-  tissue_contact_name:
-    description: Contact person for tissue-related questions
-    range: string
-
-  proposal_id:
-    description: Proposal identifier
-    range: integer
-
-  # Sample logistics
-  tube_or_plate_label:
-    description: Must be unique across all tubes and plates, and <20 characters
-    range: string
-    required: true
-    examples:
-      - value: "Sb_roots1"
-
-  sample_container:
-    description: Select tube or plate
-    range: string
-    required: true
-    examples:
-      - value: "tube"
-
-  plate_location:
-    description: Required if samples provided in a plate. for partial plates, fill by columns
-    range: string
-    required: true
-    examples:
-      - value: "B1"
-
-  biosafety_material_category:
-    description: Choose from Algae, Animal, Archaea, Bacteria, Fungi, Plant, Plasmid, Protist, Virus, Synthetic Construct
-    range: string
-    required: true
-    examples:
-      - value: "Plant"
-
-  sample_name:
-    description: A local identifier or name for the material sample
-    range: string
-    required: true
-    examples:
-      - value: "sbicolor_3d_root_1-1"
-    exact_mappings:
-      - mixs:0001107
-
-  biological_replicate_sample_group_name:
-    description: Samples that are biological replicates should have the same group name
-    range: string
-    examples:
-      - value: "sbicolor_3d_root"
-
-  combined_tissue_description:
-    description: The number and relationship between tissues if multiple tissue samples were combined
-    range: string
-    examples:
-      - value: "6 lateral root tips from each of two plants"
-
-  # Experimental design
-  experimental_time_point_number:
-    description: Integer number representing the sequential numbering of time points
-    range: integer
-    examples:
-      - value: 1
-
-  experimental_time_point_description:
-    description: Description of the time point sampled
-    range: string
-    examples:
-      - value: "3 days post germination"
-
-  # Taxonomy
-  genus:
-    description: Genus of the primary organism being sampled
-    range: string
-    required: true
-    examples:
-      - value: "Sorghum"
-    exact_mappings:
-      - mixs:0000029
-
-  species:
-    description: Species of the primary organism being sampled
-    range: string
-    required: true
-    examples:
-      - value: "bicolor"
-    exact_mappings:
-      - mixs:0000029
-
-  strain_variety_or_cultivar:
-    description: Name or ID of the cultivar, variety, strain, or other similar designation
-    range: string
-    required: true
-    examples:
-      - value: "RTx430"
-    exact_mappings:
-      - mixs:0001318
-
-  isolate:
-    description: Isolate or mutant name
-    range: string
-    examples:
-      - value: "Sb_Mut1"
-
-  germplasm_collection_and_id:
-    description: Culture collection name and ID from which the original plant germplasm was sourced
-    range: string
-    examples:
-      - value: "ABRC CS22561"
-
-  ncbi_taxonomy_id:
-    description: Unique identifier from the NCBI taxonomy database
-    range: integer
-    required: true
-    examples:
-      - value: 4558
-    exact_mappings:
-      - mixs:0000250
-
-  ancestral_data:
-    description: Information about either pedigree or other description of ancestral information
-    range: string
-    examples:
-      - value: "Hybrid of A x B lines"
-    exact_mappings:
-      - mixs:0000247
-
-  genetic_modification:
-    description: Genetic modifications of the genome of an organism
-    range: string
-    examples:
-      - value: "mlo-11 allele"
-    pattern: "^{PMID}|{DOI}|{URL}$"
-    exact_mappings:
-      - mixs:0000859
-
-  estimated_genome_size_mb:
-    description: Estimated genome size of the primary species being sampled, between 1-100000
-    range: integer
-    examples:
-      - value: 730
-
-  gc_content_percent:
-    description: Estimated GC content of the genome of the primary species being sampled
-    range: integer
-    examples:
-      - value: 45
-
-  ploidy:
-    description: The ploidy level of the genome
-    range: string
-    examples:
-      - value: "diploid"
-    pattern: "^([^\\s-]{1,2}|[^\\s-]+.+[^\\s-]+) \\[[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+\\]$"
-    exact_mappings:
-      - mixs:0000021
-
-  reference_genome:
-    description: Reference genome and annotation to be used for analysis
-    range: string
-    required: true
-    examples:
-      - value: "Phytozome Sorghum bicolor RTx430 v2.1"
-
-  # Collection and location
-  collection_date_and_time:
-    description: The time of sampling, either as an instance or interval
-    range: string
-    required: true
-    examples:
-      - value: "2025-08-10T14:00:00-07:00"
-    exact_mappings:
-      - mixs:0000011
-
-  sample_size:
-    description: The total amount or size of sample collected
-    range: string
-    required: true
-    examples:
-      - value: "0.45 g"
-    pattern: "^[-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)? *([^\\s-]{1,2}|[^\\s-]+.+[^\\s-]+)$"
-    exact_mappings:
-      - mixs:0000001
-
-  tissue:
-    description: Detailed description of the organ or type of tissue sampled
-    range: string
-    required: true
-    examples:
-      - value: "5 mm lateral root tips"
-
-  tissue_plant_ontology_term:
-    description: Plant ontology term corresponding to plant structure sampled
-    range: string
-    examples:
-      - value: "seedling cotyledon (PO:0025471);  seedling hypocotyl (PO:0025291)"
-    pattern: "^([^\\s-]{1,2}|[^\\s-]+.+[^\\s-]+) \\[[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+\\]$"
-    exact_mappings:
-      - mixs:0001060
-
-  geographic_location_region_and_locality:
-    description: The geographical origin of the sample as defined by country or sea name followed by specific region name
-    range: string
-    examples:
-      - value: "USA: California, Berkeley"
-    pattern: "^([^\\s-]{1,2}|[^\\s-]+.+[^\\s-]+): ([^\\s-]{1,2}|[^\\s-]+.+[^\\s-]+), ([^\\s-]{1,2}|[^\\s-]+.+[^\\s-]+)$"
-    exact_mappings:
-      - mixs:0000010
-
-  geographic_location_latitude:
-    description: The geographical origin of the sample as defined by latitude
-    range: float
-    examples:
-      - value: 37.877184
-    exact_mappings:
-      - mixs:0000009
-
-  geographic_location_longitude:
-    description: The geographical origin of the sample as defined by longitude
-    range: float
-    examples:
-      - value: -122.250841
-    exact_mappings:
-      - mixs:0000009
-
-  depth_meters:
-    description: The vertical distance (in meters) below local surface
-    range: string
-    examples:
-      - value: "0.1"
-    pattern: "^[-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)? *([^\\s-]{1,2}|[^\\s-]+.+[^\\s-]+)$"
-    exact_mappings:
-      - mixs:0000018
-
-  elevation_meters:
-    description: Elevation (in meters) of the sampling site as measured by the vertical distance from mean sea level
-    range: string
-    examples:
-      - value: "120"
-    pattern: "^[-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)? *([^\\s-]{1,2}|[^\\s-]+.+[^\\s-]+)$"
-    exact_mappings:
-      - mixs:0000093
-
-  temperature_celsius:
-    description: Temperature (in degrees Celsius) of the sample at time of sampling
-    range: string
-    examples:
-      - value: "22"
-    pattern: "^[-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)? *([^\\s-]{1,2}|[^\\s-]+.+[^\\s-]+)$"
-    exact_mappings:
-      - mixs:0000113
-
-  broad_scale_environmental_context:
-    description: The major environmental system the sample or specimen came from
-    range: string
-    examples:
-      - value: "rangeland biome [ENVO:01000247]"
-    pattern: "^([^\\s-]{1,2}|[^\\s-]+.+[^\\s-]+) \\[[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+\\]$"
-    exact_mappings:
-      - mixs:0000012
-
-  local_environmental_context:
-    description: The entity or entities in the sample's local vicinity
-    range: string
-    examples:
-      - value: "hillside [ENVO:01000333]"
-    exact_mappings:
-      - mixs:0000013
-
-  environmental_medium:
-    description: The environmental material(s) immediately surrounding the sample at time of sampling
-    range: string
-    examples:
-      - value: "bluegrass field soil [ENVO:00005789]"
-    pattern: "^([^\\s-]{1,2}|[^\\s-]+.+[^\\s-]+) \\[[a-zA-Z]{2,}:[a-zA-Z0-9]\\d+\\]$"
-    exact_mappings:
-      - mixs:0000014
-
-  # Growth conditions
-  growth_facility:
-    description: Type of facility where the sampled plant was grown
-    range: string
-    required: true
-    examples:
-      - value: "greenhouse"
-    exact_mappings:
-      - mixs:0001043
-
-  growth_medium:
-    description: General specification of the media for growing the plants or tissue cultured samples
-    range: string
-    required: true
-    examples:
-      - value: "soil"
-    exact_mappings:
-      - mixs:0001057
-
-  growth_medium_composition:
-    description: Detailed description of the makeup of the plant growth medium
-    range: string
-    examples:
-      - value: "2:1:1 mix of coco coir, sand, and vermiculite"
-
-  plant_age:
-    description: The age of the plant from which the tissue was sampled
-    range: string
-    required: true
-    examples:
-      - value: "3 days post germination"
-    pattern: "^[-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)? *([^\\s-]{1,2}|[^\\s-]+.+[^\\s-]+)$"
-    exact_mappings:
-      - mixs:0000255
-
-  developmental_stage:
-    description: The developmental stage of the plant from which the tissue was sampled
-    range: string
-    required: true
-    examples:
-      - value: "seedling"
-    exact_mappings:
-      - mixs:0000251
-
-  # Treatment regimens
-  air_temperature_regimen:
-    description: Information about treatment involving an exposure to varying temperatures
-    range: string
-    examples:
-      - value: "22�C 12h day / 18�C 12h night"
-    exact_mappings:
-      - mixs:0000551
-
-  antibiotic_regimen:
-    description: Information about treatment involving antibiotic administration
-    range: string
-    examples:
-      - value: "kanamycin 50 ug/mL added to agar plates for the full duration of growth"
-    exact_mappings:
-      - mixs:0000553
-
-  biotic_regimen:
-    description: Information about treatment involving use of biotic factors
-    range: string
-    examples:
-      - value: "Agrobacterium tumefaciens GV3101 infiltration"
-    exact_mappings:
-      - mixs:0001038
-
-  inoculation_method:
-    description: Method and material used for inoculation or infiltration with a biotic agent
-    range: string
-    examples:
-      - value: "syringe infiltration with GV3101 (OD600=0.5) carrying pCAMBIA1300-35S::GFP"
-
-  time_post_inoculation:
-    description: The time between inoculation with the biotic agent and sample collection
-    range: string
-    examples:
-      - value: "2:12:00"
-
-  chemical_administration:
-    description: List of chemical compounds administered to the host or site where sampling occurred
-    range: string
-    examples:
-      - value: "50 mM KNO3 fertilizer, weekly"
-    exact_mappings:
-      - mixs:0000751
-
-  chemical_mutagen:
-    description: Treatment involving use of mutagens
-    range: string
-    examples:
-      - value: "seeds soaked in EMS, 0.1%, 6h exposure before planting"
-    exact_mappings:
-      - mixs:0000555
-
-  fertilizer_administration:
-    description: Information about treatment involving the use of fertilizers
-    range: string
-    examples:
-      - value: "0.5x Hoagland's solution, weekly"
-    exact_mappings:
-      - mixs:0000556
-
-  insecticide_regimen:
-    description: Information about treatment involving use of insecticides
-    range: string
-    examples:
-      - value: "imidacloprid, 0.5 mg/L, soil drench at time of planting"
-    exact_mappings:
-      - mixs:0000573
-
-  fungicide_regimen:
-    description: Information about treatment involving use of fungicides
-    range: string
-    examples:
-      - value: "azoxystrobin, 100 ppm, foliar spray once at weeks 2, 3, and 4"
-    exact_mappings:
-      - mixs:0000557
-
-  gaseous_environment:
-    description: Use of conditions with differing gaseous environments
-    range: string
-    examples:
-      - value: "elevated CO2, 600 ppm, continuous"
-    exact_mappings:
-      - mixs:0000558
-
-  growth_hormone_regimen:
-    description: Information about treatment involving use of growth hormones
-    range: string
-    examples:
-      - value: "IAA 1 �M for 24h at 6 days old, followed by transfer to control condition without hormone for 48h before sampling"
-    exact_mappings:
-      - mixs:0000560
-
-  herbicide_regimen:
-    description: Information about treatment involving use of herbicides
-    range: string
-    examples:
-      - value: "glyphosate 10 �M, foliar spray, once at 2 weeks"
-    exact_mappings:
-      - mixs:0000561
-
-  humidity_regimen:
-    description: Information about treatment involving an exposure to varying degree of humidity
-    range: string
-    examples:
-      - value: "65% RH, constant"
-    exact_mappings:
-      - mixs:0000568
-
-  radiation_regimen:
-    description: Information about treatment involving exposure to a particular radiation regimen
-    range: string
-    examples:
-      - value: "UV-B 1.5 W/m2, 2h/day, for 5 days starting at day 7"
-    exact_mappings:
-      - mixs:0000575
-
-  light_regimen:
-    description: Information about treatment involving an exposure to light
-    range: string
-    examples:
-      - value: "150 �mol m-2 s-1, 16h light / 8h dark"
-    exact_mappings:
-      - mixs:0000569
-
-  last_light_transition_type:
-    description: The most recent light transition before sampling
-    range: string
-    examples:
-      - value: "lights on"
-
-  time_after_last_light_transition:
-    description: The time between sampling and the most recent light transition
-    range: string
-    examples:
-      - value: "2:00"
-
-  salt_regimen:
-    description: Information about treatment involving use of salts as supplement
-    range: string
-    examples:
-      - value: "NaCl 100 mM added to hydroponic medium at day 3, followed by transfer to fresh hydroponic medium without elevated NaCl for 3 days before sampling"
-    exact_mappings:
-      - mixs:0000582
-
-  rainfall_regimen:
-    description: Information about treatment involving an exposure to a given amount of rainfall
-    range: string
-    examples:
-      - value: "30cm of rainfall during growing season"
-    exact_mappings:
-      - mixs:0000576
-
-  watering_regimen:
-    description: Information about treatment involving an exposure to watering frequencies
-    range: string
-    examples:
-      - value: "100 ml per pot every 3 days"
-    exact_mappings:
-      - mixs:0000591
-
-  other_treatment_regimen:
-    description: Information about treatments not captured by other available treatment categories
-    range: string
-
-  perturbation:
-    description: Type of perturbation coupled with perturbation regimen
-    range: string
-    examples:
-      - value: "drought stress beginning at 8 weeks for a period of 4 weeks"
-    exact_mappings:
-      - mixs:0000754
-
-  mechanical_damage:
-    description: Information about any mechanical damage exerted on the plant
-    range: string
-    examples:
-      - value: "root wounding, 24h before sampling"
-    exact_mappings:
-      - mixs:0001052
-
-  # Biological characteristics
-  observed_host_symbionts:
-    description: The taxonomic name of organism(s) found living in symbiosis with the specific host
-    range: string
-    examples:
-      - value: "arbuscular mycorrhizal fungi"
-    exact_mappings:
-      - mixs:0001298
-
-  plant_sex:
-    description: Sex of the reproductive parts on the whole plant
-    range: string
-    examples:
-      - value: "hermaphrodite"
-    exact_mappings:
-      - mixs:0001059
-
-  sample_disease_status:
-    description: List of diseases with which the subject has been diagnosed at time of sample collection
-    range: string
-    examples:
-      - value: "infection with Pseudomonas syringae pv. tomato DC3000"
-    exact_mappings:
-      - mixs:0000031
-
-  sample_disease_stage:
-    description: Stage of the disease at the time of sample collection
-    range: string
-    examples:
-      - value: "infection"
-    exact_mappings:
-      - mixs:0000249
-
-  # Sample processing
-  sample_material_processing:
-    description: A brief description of any processing applied to the sample
-    range: string
-    examples:
-      - value: "roots were removed from pots rinsed with tap water before flash freezing with liquid nitrogen"
-    exact_mappings:
-      - mixs:0000016
-
-  sample_storage_temperature_celsius:
-    description: Temperature at which sample was stored (in degrees Celsius)
-    range: string
-    required: true
-    examples:
-      - value: "-80"
-    pattern: "^[-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\\.?[0-9]+(?:[eE][-+]?[0-9]+)?)? *([^\\s-]{1,2}|[^\\s-]+.+[^\\s-]+)$"
-    exact_mappings:
-      - mixs:0000110
-
-  sample_preservation_method:
-    description: The method employed for preserving or fixing the tissue
-    range: string
-    required: true
-    examples:
-      - value: "N2 Freeze"
-
-  harvest_to_preservation_time:
-    description: The time between sampling and sample preservation, minutes
-    range: string
-    examples:
-      - value: "15"
+    - seq_project_id
+    - seq_project_name
+    - sample_id
+    - seq_project_pi_name
+    - sample_contact_name
+    - tissue_contact_name
+    - proposal_id
+    - tube_or_plate_label
+    - sample_container
+    - plate_location
+    - biosafety_material_category
+    - sample_name
+    - biological_replicate_sample_group_name
+    - combined_tissue_description
+    - experimental_time_point_number
+    - experimental_time_point_description
+    - genus
+    - species
+    - strain_variety_or_cultivar
+    - isolate
+    - germplasm_collection_and_id
+    - ncbi_taxonomy_id
+    - ancestral_data
+    - genetic_modification
+    - estimated_genome_size_mb
+    - gc_content_percent
+    - ploidy
+    - reference_genome
+    - collection_date_and_time
+    - sample_size
+    - tissue
+    - tissue_plant_ontology_term
+    - geographic_location_region_and_locality
+    - geographic_location_latitude
+    - geographic_location_longitude
+    - depth_meters
+    - elevation_meters
+    - temperature_celsius
+    - broad_scale_environmental_context
+    - local_environmental_context
+    - environmental_medium
+    - growth_facility
+    - growth_medium
+    - growth_medium_composition
+    - plant_age
+    - developmental_stage
+    - air_temperature_regimen
+    - antibiotic_regimen
+    - biotic_regimen
+    - inoculation_method
+    - time_post_inoculation
+    - chemical_administration
+    - chemical_mutagen
+    - fertilizer_administration
+    - insecticide_regimen
+    - fungicide_regimen
+    - gaseous_environment
+    - growth_hormone_regimen
+    - herbicide_regimen
+    - humidity_regimen
+    - radiation_regimen
+    - light_regimen
+    - last_light_transition_type
+    - time_after_last_light_transition
+    - salt_regimen
+    - rainfall_regimen
+    - watering_regimen
+    - other_treatment_regimen
+    - perturbation
+    - mechanical_damage
+    - observed_host_symbionts
+    - plant_sex
+    - sample_disease_status
+    - sample_disease_stage
+    - sample_material_processing
+    - sample_storage_temperature_celsius
+    - sample_preservation_method
+    - harvest_to_preservation_time
+source_file: /Users/SMoxon/Documents/src/plant-tissue-metadata-schema/src/plant_tissue_metadata_schema/schema/plant_tissue_metadata_schema.yaml

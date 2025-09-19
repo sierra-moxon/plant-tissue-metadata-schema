@@ -96,6 +96,11 @@ test: _test-schema _test-python _test-examples
 lint:
   uv run linkml-lint {{source_schema_dir}}
 
+# Run linting with automatic fixes
+[group('model development')]
+lint-fix:
+  uv run linkml-lint --fix --ignore-warnings {{source_schema_dir}}
+
 # Generate md documentation for the schema
 [group('model development')]
 gen-doc: _gen-yaml _copy-src-docs
