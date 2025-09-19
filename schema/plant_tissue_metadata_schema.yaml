@@ -18,21 +18,21 @@ prefixes:
   plant_tissue:
     prefix_prefix: plant_tissue
     prefix_reference: https://w3id.org/plant-tissue-metadata-schema/
-  mixs:
-    prefix_prefix: mixs
+  MIXS:
+    prefix_prefix: MIXS
     prefix_reference: https://w3id.org/mixs/
-  po:
-    prefix_prefix: po
+  PO:
+    prefix_prefix: PO
     prefix_reference: http://purl.obolibrary.org/obo/PO_
-  envo:
-    prefix_prefix: envo
+  ENVO:
+    prefix_prefix: ENVO
     prefix_reference: http://purl.obolibrary.org/obo/ENVO_
-  pato:
-    prefix_prefix: pato
+  PATO:
+    prefix_prefix: PATO
     prefix_reference: http://purl.obolibrary.org/obo/PATO_
-  orcid:
-    prefix_prefix: orcid
-    prefix_reference: https://orcid.org/
+  ORCID:
+    prefix_prefix: ORCID
+    prefix_reference: http://identifiers.org/orcid/
 default_prefix: plant_tissue
 default_range: string
 types:
@@ -311,7 +311,7 @@ slots:
     description: Project identifier, prefilled
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000092
+    - MIXS:0000092
     slot_uri: plant_tissue:seq_project_id
     owner: PlantTissueSample
     domain_of:
@@ -326,7 +326,7 @@ slots:
     - value: Forest soil metagenome
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000092
+    - MIXS:0000092
     slot_uri: plant_tissue:seq_project_name
     owner: PlantTissueSample
     domain_of:
@@ -339,7 +339,7 @@ slots:
     description: Unique identifier assigned to a material sample
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000026
+    - MIXS:0000026
     slot_uri: plant_tissue:sample_id
     owner: PlantTissueSample
     domain_of:
@@ -449,7 +449,7 @@ slots:
     - value: sbicolor_3d_root_1-1
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001107
+    - MIXS:0001107
     slot_uri: plant_tissue:sample_name
     owner: PlantTissueSample
     domain_of:
@@ -514,7 +514,7 @@ slots:
     - value: Sorghum
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000029
+    - MIXS:0000029
     slot_uri: plant_tissue:genus
     owner: PlantTissueSample
     domain_of:
@@ -529,7 +529,7 @@ slots:
     - value: bicolor
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000029
+    - MIXS:0000029
     slot_uri: plant_tissue:species
     owner: PlantTissueSample
     domain_of:
@@ -544,7 +544,7 @@ slots:
     - value: RTx430
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001318
+    - MIXS:0001318
     slot_uri: plant_tissue:strain_variety_or_cultivar
     owner: PlantTissueSample
     domain_of:
@@ -584,7 +584,7 @@ slots:
     - value: '4558'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000250
+    - MIXS:0000250
     slot_uri: plant_tissue:ncbi_taxonomy_id
     owner: PlantTissueSample
     domain_of:
@@ -600,7 +600,7 @@ slots:
     - value: Hybrid of A x B lines
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000247
+    - MIXS:0000247
     slot_uri: plant_tissue:ancestral_data
     owner: PlantTissueSample
     domain_of:
@@ -614,7 +614,7 @@ slots:
     - value: mlo-11 allele
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000859
+    - MIXS:0000859
     slot_uri: plant_tissue:genetic_modification
     owner: PlantTissueSample
     domain_of:
@@ -654,7 +654,7 @@ slots:
     - value: diploid
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000021
+    - MIXS:0000021
     slot_uri: plant_tissue:ploidy
     owner: PlantTissueSample
     domain_of:
@@ -682,7 +682,7 @@ slots:
     - value: '2025-08-10T14:00:00-07:00'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000011
+    - MIXS:0000011
     slot_uri: plant_tissue:collection_date_and_time
     owner: PlantTissueSample
     domain_of:
@@ -697,7 +697,7 @@ slots:
     - value: 0.45 g
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000001
+    - MIXS:0000001
     slot_uri: plant_tissue:sample_size
     owner: PlantTissueSample
     domain_of:
@@ -727,7 +727,7 @@ slots:
     - value: seedling cotyledon (PO:0025471);  seedling hypocotyl (PO:0025291)
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001060
+    - MIXS:0001060
     slot_uri: plant_tissue:tissue_plant_ontology_term
     owner: PlantTissueSample
     domain_of:
@@ -743,7 +743,7 @@ slots:
     - value: 'USA: California, Berkeley'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000010
+    - MIXS:0000010
     slot_uri: plant_tissue:geographic_location_region_and_locality
     owner: PlantTissueSample
     domain_of:
@@ -758,7 +758,7 @@ slots:
     - value: '37.877184'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000009
+    - MIXS:0000009
     slot_uri: plant_tissue:geographic_location_latitude
     owner: PlantTissueSample
     domain_of:
@@ -772,7 +772,7 @@ slots:
     - value: '-122.250841'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000009
+    - MIXS:0000009
     slot_uri: plant_tissue:geographic_location_longitude
     owner: PlantTissueSample
     domain_of:
@@ -786,7 +786,7 @@ slots:
     - value: '0.1'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000018
+    - MIXS:0000018
     slot_uri: plant_tissue:depth_meters
     owner: PlantTissueSample
     domain_of:
@@ -803,7 +803,7 @@ slots:
     - value: '120'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000093
+    - MIXS:0000093
     slot_uri: plant_tissue:elevation_meters
     owner: PlantTissueSample
     domain_of:
@@ -819,7 +819,7 @@ slots:
     - value: '22'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000113
+    - MIXS:0000113
     slot_uri: plant_tissue:temperature_celsius
     owner: PlantTissueSample
     domain_of:
@@ -835,7 +835,7 @@ slots:
     - value: rangeland biome [ENVO:01000247]
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000012
+    - MIXS:0000012
     slot_uri: plant_tissue:broad_scale_environmental_context
     owner: PlantTissueSample
     domain_of:
@@ -850,7 +850,7 @@ slots:
     - value: hillside [ENVO:01000333]
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000013
+    - MIXS:0000013
     slot_uri: plant_tissue:local_environmental_context
     owner: PlantTissueSample
     domain_of:
@@ -865,7 +865,7 @@ slots:
     - value: bluegrass field soil [ENVO:00005789]
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000014
+    - MIXS:0000014
     slot_uri: plant_tissue:environmental_medium
     owner: PlantTissueSample
     domain_of:
@@ -880,7 +880,7 @@ slots:
     - value: greenhouse
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001043
+    - MIXS:0001043
     slot_uri: plant_tissue:growth_facility
     owner: PlantTissueSample
     domain_of:
@@ -896,7 +896,7 @@ slots:
     - value: soil
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001057
+    - MIXS:0001057
     slot_uri: plant_tissue:growth_medium
     owner: PlantTissueSample
     domain_of:
@@ -923,7 +923,7 @@ slots:
     - value: 3 days post germination
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000255
+    - MIXS:0000255
     slot_uri: plant_tissue:plant_age
     owner: PlantTissueSample
     domain_of:
@@ -940,7 +940,7 @@ slots:
     - value: seedling
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000251
+    - MIXS:0000251
     slot_uri: plant_tissue:developmental_stage
     owner: PlantTissueSample
     domain_of:
@@ -955,7 +955,7 @@ slots:
     - value: "22\uFFFDC 12h day / 18\uFFFDC 12h night"
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000551
+    - MIXS:0000551
     slot_uri: plant_tissue:air_temperature_regimen
     owner: PlantTissueSample
     domain_of:
@@ -969,7 +969,7 @@ slots:
     - value: kanamycin 50 ug/mL added to agar plates for the full duration of growth
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000553
+    - MIXS:0000553
     slot_uri: plant_tissue:antibiotic_regimen
     owner: PlantTissueSample
     domain_of:
@@ -983,7 +983,7 @@ slots:
     - value: Agrobacterium tumefaciens GV3101 infiltration
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001038
+    - MIXS:0001038
     slot_uri: plant_tissue:biotic_regimen
     owner: PlantTissueSample
     domain_of:
@@ -1023,7 +1023,7 @@ slots:
     - value: 50 mM KNO3 fertilizer, weekly
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000751
+    - MIXS:0000751
     slot_uri: plant_tissue:chemical_administration
     owner: PlantTissueSample
     domain_of:
@@ -1037,7 +1037,7 @@ slots:
     - value: seeds soaked in EMS, 0.1%, 6h exposure before planting
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000555
+    - MIXS:0000555
     slot_uri: plant_tissue:chemical_mutagen
     owner: PlantTissueSample
     domain_of:
@@ -1051,7 +1051,7 @@ slots:
     - value: 0.5x Hoagland's solution, weekly
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000556
+    - MIXS:0000556
     slot_uri: plant_tissue:fertilizer_administration
     owner: PlantTissueSample
     domain_of:
@@ -1065,7 +1065,7 @@ slots:
     - value: imidacloprid, 0.5 mg/L, soil drench at time of planting
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000573
+    - MIXS:0000573
     slot_uri: plant_tissue:insecticide_regimen
     owner: PlantTissueSample
     domain_of:
@@ -1079,7 +1079,7 @@ slots:
     - value: azoxystrobin, 100 ppm, foliar spray once at weeks 2, 3, and 4
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000557
+    - MIXS:0000557
     slot_uri: plant_tissue:fungicide_regimen
     owner: PlantTissueSample
     domain_of:
@@ -1093,7 +1093,7 @@ slots:
     - value: elevated CO2, 600 ppm, continuous
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000558
+    - MIXS:0000558
     slot_uri: plant_tissue:gaseous_environment
     owner: PlantTissueSample
     domain_of:
@@ -1108,7 +1108,7 @@ slots:
         \ condition without hormone for 48h before sampling"
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000560
+    - MIXS:0000560
     slot_uri: plant_tissue:growth_hormone_regimen
     owner: PlantTissueSample
     domain_of:
@@ -1122,7 +1122,7 @@ slots:
     - value: "glyphosate 10 \uFFFDM, foliar spray, once at 2 weeks"
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000561
+    - MIXS:0000561
     slot_uri: plant_tissue:herbicide_regimen
     owner: PlantTissueSample
     domain_of:
@@ -1137,7 +1137,7 @@ slots:
     - value: 65% RH, constant
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000568
+    - MIXS:0000568
     slot_uri: plant_tissue:humidity_regimen
     owner: PlantTissueSample
     domain_of:
@@ -1152,7 +1152,7 @@ slots:
     - value: UV-B 1.5 W/m2, 2h/day, for 5 days starting at day 7
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000575
+    - MIXS:0000575
     slot_uri: plant_tissue:radiation_regimen
     owner: PlantTissueSample
     domain_of:
@@ -1166,7 +1166,7 @@ slots:
     - value: "150 \uFFFDmol m-2 s-1, 16h light / 8h dark"
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000569
+    - MIXS:0000569
     slot_uri: plant_tissue:light_regimen
     owner: PlantTissueSample
     domain_of:
@@ -1205,7 +1205,7 @@ slots:
         to fresh hydroponic medium without elevated NaCl for 3 days before sampling
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000582
+    - MIXS:0000582
     slot_uri: plant_tissue:salt_regimen
     owner: PlantTissueSample
     domain_of:
@@ -1220,7 +1220,7 @@ slots:
     - value: 30cm of rainfall during growing season
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000576
+    - MIXS:0000576
     slot_uri: plant_tissue:rainfall_regimen
     owner: PlantTissueSample
     domain_of:
@@ -1234,7 +1234,7 @@ slots:
     - value: 100 ml per pot every 3 days
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000591
+    - MIXS:0000591
     slot_uri: plant_tissue:watering_regimen
     owner: PlantTissueSample
     domain_of:
@@ -1259,7 +1259,7 @@ slots:
     - value: drought stress beginning at 8 weeks for a period of 4 weeks
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000754
+    - MIXS:0000754
     slot_uri: plant_tissue:perturbation
     owner: PlantTissueSample
     domain_of:
@@ -1273,7 +1273,7 @@ slots:
     - value: root wounding, 24h before sampling
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001052
+    - MIXS:0001052
     slot_uri: plant_tissue:mechanical_damage
     owner: PlantTissueSample
     domain_of:
@@ -1288,7 +1288,7 @@ slots:
     - value: arbuscular mycorrhizal fungi
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001298
+    - MIXS:0001298
     slot_uri: plant_tissue:observed_host_symbionts
     owner: PlantTissueSample
     domain_of:
@@ -1302,7 +1302,7 @@ slots:
     - value: hermaphrodite
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001059
+    - MIXS:0001059
     slot_uri: plant_tissue:plant_sex
     owner: PlantTissueSample
     domain_of:
@@ -1317,7 +1317,7 @@ slots:
     - value: infection with Pseudomonas syringae pv. tomato DC3000
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000031
+    - MIXS:0000031
     slot_uri: plant_tissue:sample_disease_status
     owner: PlantTissueSample
     domain_of:
@@ -1331,7 +1331,7 @@ slots:
     - value: infection
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000249
+    - MIXS:0000249
     slot_uri: plant_tissue:sample_disease_stage
     owner: PlantTissueSample
     domain_of:
@@ -1346,7 +1346,7 @@ slots:
         with liquid nitrogen
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000016
+    - MIXS:0000016
     slot_uri: plant_tissue:sample_material_processing
     owner: PlantTissueSample
     domain_of:
@@ -1360,7 +1360,7 @@ slots:
     - value: '-80'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000110
+    - MIXS:0000110
     slot_uri: plant_tissue:sample_storage_temperature_celsius
     owner: PlantTissueSample
     domain_of:
@@ -1482,7 +1482,7 @@ classes:
     class_uri: plant_tissue:PlantTissueSample
 metamodel_version: 1.7.0
 source_file: plant_tissue_metadata_schema.yaml
-source_file_date: '2025-09-19T20:24:05'
-source_file_size: 20914
-generation_date: '2025-09-19T20:24:13'
+source_file_date: '2025-09-19T20:30:35'
+source_file_size: 31118
+generation_date: '2025-09-19T20:30:44'
 
