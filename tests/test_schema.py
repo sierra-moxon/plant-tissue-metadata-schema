@@ -70,7 +70,7 @@ def test_mixs_mappings():
     for slot in view.all_slots().values():
         if hasattr(slot, 'exact_mappings') and slot.exact_mappings:
             for mapping in slot.exact_mappings:
-                if str(mapping).startswith('mixs:'):
+                if str(mapping).startswith('MIXS:'):
                     slots_with_mixs += 1
                     break
     
