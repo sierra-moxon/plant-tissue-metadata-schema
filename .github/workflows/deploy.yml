@@ -77,7 +77,7 @@ jobs:
           
       - name: Build DataHarmonizer
         run: |
-          npm ci
+          npm install
           npm run build -- --base /${{ github.event.repository.name }}
           
       - name: Upload harmonizer artifact
