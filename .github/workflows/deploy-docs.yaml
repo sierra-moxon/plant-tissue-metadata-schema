@@ -55,4 +55,11 @@ jobs:
       - name: Generate schema documentation
         run: |
           just gen-doc
+      
+      - name: Verify logo file exists
+        run: |
+          ls -la docs/jgi_logo.png || echo "Logo file not found!"
+          
+      - name: Deploy to GitHub Pages
+        run: |
           uv run mkdocs gh-deploy
