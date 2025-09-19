@@ -1,5 +1,5 @@
 # Auto generated from plant_tissue_metadata_schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-09-18T16:13:04
+# Generation date: 2025-09-19T13:42:47
 # Schema: plant-tissue-metadata-schema
 #
 # id: https://w3id.org/plant-tissue-metadata-schema
@@ -63,13 +63,13 @@ metamodel_version = "1.7.0"
 version = None
 
 # Namespaces
-ENVO = CurieNamespace('envo', 'http://purl.obolibrary.org/obo/ENVO_')
+ENVO = CurieNamespace('ENVO', 'http://purl.obolibrary.org/obo/ENVO_')
+ORCID = CurieNamespace('ORCID', 'http://identifiers.org/orcid/')
+PATO = CurieNamespace('PATO', 'http://purl.obolibrary.org/obo/PATO_')
+PO = CurieNamespace('PO', 'http://purl.obolibrary.org/obo/PO_')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
 MIXS = CurieNamespace('mixs', 'https://w3id.org/mixs/')
-ORCID = CurieNamespace('orcid', 'https://orcid.org/')
-PATO = CurieNamespace('pato', 'http://purl.obolibrary.org/obo/PATO_')
 PLANT_TISSUE = CurieNamespace('plant_tissue', 'https://w3id.org/plant-tissue-metadata-schema/')
-PO = CurieNamespace('po', 'http://purl.obolibrary.org/obo/PO_')
 DEFAULT_ = PLANT_TISSUE
 
 
