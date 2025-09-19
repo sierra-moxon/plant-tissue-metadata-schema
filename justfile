@@ -75,7 +75,7 @@ clean: _clean_project
   rm -rf {{docdir}}/*.md
   @if [ -d "src/docs" ]; then \
     echo "Removing copied source documentation files"; \
-    rm -f docs/*.md docs/*.png docs/*.jpg docs/*.jpeg docs/*.gif docs/*.svg 2>/dev/null || true; \
+    rm -f docs/*.md docs/*.html docs/*.png 2>/dev/null || true; \
   fi
 
 # (Re-)Generate project and documentation locally
@@ -108,7 +108,15 @@ gen-doc: _gen-yaml _copy-src-docs
 
 # Build docs and run test server
 [group('model development')]
-testdoc: gen-doc _serve
+testdoc: gen-doc
+  npm run build
+  cp -r dist/assets docs/
+  cp dist/index.html docs/harmonizer.html
+  sed -i '' 's|"/assets/|"assets/|g' docs/harmonizer.html
+  mkdir -p docs/schemas
+  cp schemas/plant-tissue-metadata-schema.json docs/schemas/
+  cp menu.json docs/
+  uv run mkdocs serve
 
 # Generate the Python data models (dataclasses & pydantic)
 gen-python:
@@ -227,11 +235,8 @@ _copy-src-docs:
   @if [ -d "src/docs" ]; then \
     echo "Copying source documentation files from src/docs/ to docs/"; \
     cp src/docs/*.md docs/ 2>/dev/null || true; \
+    cp src/docs/*.html docs/ 2>/dev/null || true; \
     cp src/docs/*.png docs/ 2>/dev/null || true; \
-    cp src/docs/*.jpg docs/ 2>/dev/null || true; \
-    cp src/docs/*.jpeg docs/ 2>/dev/null || true; \
-    cp src/docs/*.gif docs/ 2>/dev/null || true; \
-    cp src/docs/*.svg docs/ 2>/dev/null || true; \
   fi
 
 # Run documentation server
