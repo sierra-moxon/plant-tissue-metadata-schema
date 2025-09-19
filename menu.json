@@ -1,0 +1,9 @@
+{
+  "plant-tissue-metadata-schema": {
+    "PlantTissueSample": {
+      "name": "PlantTissueSample",
+      "status": "published",
+      "display": true
+    }
+  }
+}

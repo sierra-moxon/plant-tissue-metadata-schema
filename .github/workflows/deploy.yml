@@ -1,0 +1,119 @@
+name: Build & Deploy Documentation and DataHarmonizer
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-docs:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          
+      - name: Install UV
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+        
+      - name: Install dependencies
+        run: |
+          source $HOME/.cargo/env
+          uv sync --group dev
+          
+      - name: Generate documentation
+        run: |
+          source $HOME/.cargo/env
+          uv run just gen-doc
+          
+      - name: Upload docs artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-site
+          path: docs/
+
+  build-harmonizer:
+    permissions:
+      contents: read
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+          
+      - name: Install UV
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+        
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          
+      - name: Generate JSON schema
+        run: |
+          source $HOME/.cargo/env
+          uv sync --group dev
+          mkdir -p schemas
+          uv run gen-linkml --materialize-patterns --materialize-attributes src/plant_tissue_metadata_schema/schema/plant_tissue_metadata_schema.yaml > schemas/plant-tissue-metadata-schema.json
+          
+      - name: Build DataHarmonizer
+        run: |
+          npm ci
+          npm run build -- --base /${{ github.event.repository.name }}
+          
+      - name: Upload harmonizer artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: harmonizer-dist
+          path: 'dist'
+
+  deploy:
+    needs: [build-docs, build-harmonizer]
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download docs artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: docs-site
+          path: docs-site
+          
+      - name: Download harmonizer artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: harmonizer-dist
+          path: harmonizer-dist
+          
+      - name: Combine artifacts
+        run: |
+          mkdir -p combined-site
+          cp -r docs-site/* combined-site/
+          cp -r harmonizer-dist/* combined-site/harmonizer/
+          
+      - name: Upload combined pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'combined-site'
+          
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

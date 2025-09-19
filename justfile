@@ -114,7 +114,7 @@ testdoc: gen-doc
   cp dist/index.html docs/harmonizer.html
   sed -i '' 's|"/assets/|"assets/|g' docs/harmonizer.html
   mkdir -p docs/schemas
-  cp schemas/plant-tissue-metadata-schema.json docs/schemas/
+  uv run gen-linkml --materialize-patterns --materialize-attributes {{source_schema_path}} > docs/schemas/plant-tissue-metadata-schema.json
   cp menu.json docs/
   uv run mkdocs serve
 

@@ -41,7 +41,7 @@ slots:
     description: Project identifier, prefilled
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000092
+    - MIXS:0000092
     domain_of:
     - PlantTissueSample
     range: integer
@@ -53,7 +53,7 @@ slots:
     - value: Forest soil metagenome
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000092
+    - MIXS:0000092
     domain_of:
     - PlantTissueSample
     range: string
@@ -63,7 +63,7 @@ slots:
     description: Unique identifier assigned to a material sample
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000026
+    - MIXS:0000026
     domain_of:
     - PlantTissueSample
     range: integer
@@ -146,7 +146,7 @@ slots:
     - value: sbicolor_3d_root_1-1
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001107
+    - MIXS:0001107
     domain_of:
     - PlantTissueSample
     range: string
@@ -196,7 +196,7 @@ slots:
     - value: Sorghum
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000029
+    - MIXS:0000029
     domain_of:
     - PlantTissueSample
     range: string
@@ -208,7 +208,7 @@ slots:
     - value: bicolor
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000029
+    - MIXS:0000029
     domain_of:
     - PlantTissueSample
     range: string
@@ -220,7 +220,7 @@ slots:
     - value: RTx430
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001318
+    - MIXS:0001318
     domain_of:
     - PlantTissueSample
     range: string
@@ -251,7 +251,7 @@ slots:
     - value: '4558'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000250
+    - MIXS:0000250
     domain_of:
     - PlantTissueSample
     range: integer
@@ -264,7 +264,7 @@ slots:
     - value: Hybrid of A x B lines
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000247
+    - MIXS:0000247
     domain_of:
     - PlantTissueSample
     range: string
@@ -275,7 +275,7 @@ slots:
     - value: mlo-11 allele
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000859
+    - MIXS:0000859
     domain_of:
     - PlantTissueSample
     range: string
@@ -306,7 +306,7 @@ slots:
     - value: diploid
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000021
+    - MIXS:0000021
     domain_of:
     - PlantTissueSample
     range: string
@@ -328,7 +328,7 @@ slots:
     - value: '2025-08-10T14:00:00-07:00'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000011
+    - MIXS:0000011
     domain_of:
     - PlantTissueSample
     range: string
@@ -340,7 +340,7 @@ slots:
     - value: 0.45 g
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000001
+    - MIXS:0000001
     domain_of:
     - PlantTissueSample
     range: string
@@ -364,7 +364,7 @@ slots:
     - value: seedling cotyledon (PO:0025471);  seedling hypocotyl (PO:0025291)
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001060
+    - MIXS:0001060
     domain_of:
     - PlantTissueSample
     range: string
@@ -377,7 +377,7 @@ slots:
     - value: 'USA: California, Berkeley'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000010
+    - MIXS:0000010
     domain_of:
     - PlantTissueSample
     range: string
@@ -389,7 +389,7 @@ slots:
     - value: '37.877184'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000009
+    - MIXS:0000009
     domain_of:
     - PlantTissueSample
     range: float
@@ -400,7 +400,7 @@ slots:
     - value: '-122.250841'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000009
+    - MIXS:0000009
     domain_of:
     - PlantTissueSample
     range: float
@@ -411,7 +411,7 @@ slots:
     - value: '0.1'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000018
+    - MIXS:0000018
     domain_of:
     - PlantTissueSample
     range: string
@@ -425,7 +425,7 @@ slots:
     - value: '120'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000093
+    - MIXS:0000093
     domain_of:
     - PlantTissueSample
     range: string
@@ -438,7 +438,7 @@ slots:
     - value: '22'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000113
+    - MIXS:0000113
     domain_of:
     - PlantTissueSample
     range: string
@@ -451,7 +451,7 @@ slots:
     - value: rangeland biome [ENVO:01000247]
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000012
+    - MIXS:0000012
     domain_of:
     - PlantTissueSample
     range: string
@@ -463,7 +463,7 @@ slots:
     - value: hillside [ENVO:01000333]
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000013
+    - MIXS:0000013
     domain_of:
     - PlantTissueSample
     range: string
@@ -475,7 +475,7 @@ slots:
     - value: bluegrass field soil [ENVO:00005789]
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000014
+    - MIXS:0000014
     domain_of:
     - PlantTissueSample
     range: string
@@ -487,7 +487,7 @@ slots:
     - value: greenhouse
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001043
+    - MIXS:0001043
     domain_of:
     - PlantTissueSample
     range: string
@@ -500,7 +500,7 @@ slots:
     - value: soil
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001057
+    - MIXS:0001057
     domain_of:
     - PlantTissueSample
     range: string
@@ -521,7 +521,7 @@ slots:
     - value: 3 days post germination
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000255
+    - MIXS:0000255
     domain_of:
     - PlantTissueSample
     range: string
@@ -535,7 +535,7 @@ slots:
     - value: seedling
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000251
+    - MIXS:0000251
     domain_of:
     - PlantTissueSample
     range: string
@@ -547,7 +547,7 @@ slots:
     - value: 22�C 12h day / 18�C 12h night
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000551
+    - MIXS:0000551
     domain_of:
     - PlantTissueSample
     range: string
@@ -558,7 +558,7 @@ slots:
     - value: kanamycin 50 ug/mL added to agar plates for the full duration of growth
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000553
+    - MIXS:0000553
     domain_of:
     - PlantTissueSample
     range: string
@@ -569,7 +569,7 @@ slots:
     - value: Agrobacterium tumefaciens GV3101 infiltration
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001038
+    - MIXS:0001038
     domain_of:
     - PlantTissueSample
     range: string
@@ -600,7 +600,7 @@ slots:
     - value: 50 mM KNO3 fertilizer, weekly
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000751
+    - MIXS:0000751
     domain_of:
     - PlantTissueSample
     range: string
@@ -611,7 +611,7 @@ slots:
     - value: seeds soaked in EMS, 0.1%, 6h exposure before planting
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000555
+    - MIXS:0000555
     domain_of:
     - PlantTissueSample
     range: string
@@ -622,7 +622,7 @@ slots:
     - value: 0.5x Hoagland's solution, weekly
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000556
+    - MIXS:0000556
     domain_of:
     - PlantTissueSample
     range: string
@@ -633,7 +633,7 @@ slots:
     - value: imidacloprid, 0.5 mg/L, soil drench at time of planting
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000573
+    - MIXS:0000573
     domain_of:
     - PlantTissueSample
     range: string
@@ -644,7 +644,7 @@ slots:
     - value: azoxystrobin, 100 ppm, foliar spray once at weeks 2, 3, and 4
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000557
+    - MIXS:0000557
     domain_of:
     - PlantTissueSample
     range: string
@@ -655,7 +655,7 @@ slots:
     - value: elevated CO2, 600 ppm, continuous
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000558
+    - MIXS:0000558
     domain_of:
     - PlantTissueSample
     range: string
@@ -667,7 +667,7 @@ slots:
         without hormone for 48h before sampling
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000560
+    - MIXS:0000560
     domain_of:
     - PlantTissueSample
     range: string
@@ -678,7 +678,7 @@ slots:
     - value: glyphosate 10 �M, foliar spray, once at 2 weeks
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000561
+    - MIXS:0000561
     domain_of:
     - PlantTissueSample
     range: string
@@ -690,7 +690,7 @@ slots:
     - value: 65% RH, constant
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000568
+    - MIXS:0000568
     domain_of:
     - PlantTissueSample
     range: string
@@ -702,7 +702,7 @@ slots:
     - value: UV-B 1.5 W/m2, 2h/day, for 5 days starting at day 7
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000575
+    - MIXS:0000575
     domain_of:
     - PlantTissueSample
     range: string
@@ -713,7 +713,7 @@ slots:
     - value: 150 �mol m-2 s-1, 16h light / 8h dark
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000569
+    - MIXS:0000569
     domain_of:
     - PlantTissueSample
     range: string
@@ -743,7 +743,7 @@ slots:
         to fresh hydroponic medium without elevated NaCl for 3 days before sampling
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000582
+    - MIXS:0000582
     domain_of:
     - PlantTissueSample
     range: string
@@ -755,7 +755,7 @@ slots:
     - value: 30cm of rainfall during growing season
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000576
+    - MIXS:0000576
     domain_of:
     - PlantTissueSample
     range: string
@@ -766,7 +766,7 @@ slots:
     - value: 100 ml per pot every 3 days
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000591
+    - MIXS:0000591
     domain_of:
     - PlantTissueSample
     range: string
@@ -785,7 +785,7 @@ slots:
     - value: drought stress beginning at 8 weeks for a period of 4 weeks
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000754
+    - MIXS:0000754
     domain_of:
     - PlantTissueSample
     range: string
@@ -796,7 +796,7 @@ slots:
     - value: root wounding, 24h before sampling
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001052
+    - MIXS:0001052
     domain_of:
     - PlantTissueSample
     range: string
@@ -808,7 +808,7 @@ slots:
     - value: arbuscular mycorrhizal fungi
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001298
+    - MIXS:0001298
     domain_of:
     - PlantTissueSample
     range: string
@@ -819,7 +819,7 @@ slots:
     - value: hermaphrodite
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0001059
+    - MIXS:0001059
     domain_of:
     - PlantTissueSample
     range: string
@@ -831,7 +831,7 @@ slots:
     - value: infection with Pseudomonas syringae pv. tomato DC3000
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000031
+    - MIXS:0000031
     domain_of:
     - PlantTissueSample
     range: string
@@ -842,7 +842,7 @@ slots:
     - value: infection
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000249
+    - MIXS:0000249
     domain_of:
     - PlantTissueSample
     range: string
@@ -854,7 +854,7 @@ slots:
         with liquid nitrogen
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000016
+    - MIXS:0000016
     domain_of:
     - PlantTissueSample
     range: string
@@ -865,7 +865,7 @@ slots:
     - value: '-80'
     from_schema: https://w3id.org/plant-tissue-metadata-schema
     exact_mappings:
-    - mixs:0000110
+    - MIXS:0000110
     domain_of:
     - PlantTissueSample
     range: string
