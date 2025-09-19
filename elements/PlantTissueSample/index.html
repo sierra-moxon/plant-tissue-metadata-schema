@@ -1,0 +1,2110 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/PlantTissueSample/" rel="canonical"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.6.1, mkdocs-material-9.6.20" name="generator"/>
+<title>Class: PlantTissueSample - plant-tissue-metadata-schema</title>
+<link href="../../assets/stylesheets/main.e53b48f4.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<link href="../../css/ansi-colours.css" rel="stylesheet"/>
+<link href="../../css/jupyter-cells.css" rel="stylesheet"/>
+<link href="../../css/pandas-dataframe.css" rel="stylesheet"/>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body dir="ltr">
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#class-planttissuesample">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="plant-tissue-metadata-schema" class="md-header__button md-logo" data-md-component="logo" href="../.." title="plant-tissue-metadata-schema">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            plant-tissue-metadata-schema
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Class: PlantTissueSample
+            
+          </span>
+</div>
+</div>
+</div>
+<script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="" tabindex="0">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/sierra-moxon/plant-tissue-metadata-schema" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="plant-tissue-metadata-schema" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="plant-tissue-metadata-schema">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+</a>
+    plant-tissue-metadata-schema
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/sierra-moxon/plant-tissue-metadata-schema" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+<span class="md-ellipsis">
+    Home
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../">
+<span class="md-ellipsis">
+    Schema
+    
+  </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/">
+<span class="md-ellipsis">
+    About
+    
+  </span>
+</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#slots">
+<span class="md-ellipsis">
+      Slots
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#identifier-and-mapping-information">
+<span class="md-ellipsis">
+      Identifier and Mapping Information
+    </span>
+</a>
+<nav aria-label="Identifier and Mapping Information" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#schema-source">
+<span class="md-ellipsis">
+      Schema Source
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#mappings">
+<span class="md-ellipsis">
+      Mappings
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linkml-source">
+<span class="md-ellipsis">
+      LinkML Source
+    </span>
+</a>
+<nav aria-label="LinkML Source" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#direct">
+<span class="md-ellipsis">
+      Direct
+    </span>
+</a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#induced">
+<span class="md-ellipsis">
+      Induced
+    </span>
+</a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1 id="class-planttissuesample">Class: PlantTissueSample</h1>
+<p><em>A sample of plant tissue with associated metadata</em></p>
+<p>URI: <a href="https://w3id.org/plant-tissue-metadata-schema/PlantTissueSample">plant_tissue:PlantTissueSample</a></p>
+<div class="mermaid"> classDiagram
+    class PlantTissueSample
+    click PlantTissueSample href "../PlantTissueSample/"
+      PlantTissueSample : air_temperature_regimen
+
+      PlantTissueSample : ancestral_data
+
+      PlantTissueSample : antibiotic_regimen
+
+      PlantTissueSample : biological_replicate_sample_group_name
+
+      PlantTissueSample : biosafety_material_category
+
+      PlantTissueSample : biotic_regimen
+
+      PlantTissueSample : broad_scale_environmental_context
+
+      PlantTissueSample : chemical_administration
+
+      PlantTissueSample : chemical_mutagen
+
+      PlantTissueSample : collection_date_and_time
+
+      PlantTissueSample : combined_tissue_description
+
+      PlantTissueSample : depth_meters
+
+      PlantTissueSample : developmental_stage
+
+      PlantTissueSample : elevation_meters
+
+      PlantTissueSample : environmental_medium
+
+      PlantTissueSample : estimated_genome_size_mb
+
+      PlantTissueSample : experimental_time_point_description
+
+      PlantTissueSample : experimental_time_point_number
+
+      PlantTissueSample : fertilizer_administration
+
+      PlantTissueSample : fungicide_regimen
+
+      PlantTissueSample : gaseous_environment
+
+      PlantTissueSample : gc_content_percent
+
+      PlantTissueSample : genetic_modification
+
+      PlantTissueSample : genus
+
+      PlantTissueSample : geographic_location_latitude
+
+      PlantTissueSample : geographic_location_longitude
+
+      PlantTissueSample : geographic_location_region_and_locality
+
+      PlantTissueSample : germplasm_collection_and_id
+
+      PlantTissueSample : growth_facility
+
+      PlantTissueSample : growth_hormone_regimen
+
+      PlantTissueSample : growth_medium
+
+      PlantTissueSample : growth_medium_composition
+
+      PlantTissueSample : harvest_to_preservation_time
+
+      PlantTissueSample : herbicide_regimen
+
+      PlantTissueSample : humidity_regimen
+
+      PlantTissueSample : inoculation_method
+
+      PlantTissueSample : insecticide_regimen
+
+      PlantTissueSample : isolate
+
+      PlantTissueSample : last_light_transition_type
+
+      PlantTissueSample : light_regimen
+
+      PlantTissueSample : local_environmental_context
+
+      PlantTissueSample : mechanical_damage
+
+      PlantTissueSample : ncbi_taxonomy_id
+
+      PlantTissueSample : observed_host_symbionts
+
+      PlantTissueSample : other_treatment_regimen
+
+      PlantTissueSample : perturbation
+
+      PlantTissueSample : plant_age
+
+      PlantTissueSample : plant_sex
+
+      PlantTissueSample : plate_location
+
+      PlantTissueSample : ploidy
+
+      PlantTissueSample : proposal_id
+
+      PlantTissueSample : radiation_regimen
+
+      PlantTissueSample : rainfall_regimen
+
+      PlantTissueSample : reference_genome
+
+      PlantTissueSample : salt_regimen
+
+      PlantTissueSample : sample_contact_name
+
+      PlantTissueSample : sample_container
+
+      PlantTissueSample : sample_disease_stage
+
+      PlantTissueSample : sample_disease_status
+
+      PlantTissueSample : sample_id
+
+      PlantTissueSample : sample_material_processing
+
+      PlantTissueSample : sample_name
+
+      PlantTissueSample : sample_preservation_method
+
+      PlantTissueSample : sample_size
+
+      PlantTissueSample : sample_storage_temperature_celsius
+
+      PlantTissueSample : seq_project_id
+
+      PlantTissueSample : seq_project_name
+
+      PlantTissueSample : seq_project_pi_name
+
+      PlantTissueSample : species
+
+      PlantTissueSample : strain_variety_or_cultivar
+
+      PlantTissueSample : temperature_celsius
+
+      PlantTissueSample : time_after_last_light_transition
+
+      PlantTissueSample : time_post_inoculation
+
+      PlantTissueSample : tissue
+
+      PlantTissueSample : tissue_contact_name
+
+      PlantTissueSample : tissue_plant_ontology_term
+
+      PlantTissueSample : tube_or_plate_label
+
+      PlantTissueSample : watering_regimen
+
+
+</div>
+<!-- no inheritance hierarchy -->
+<h2 id="slots">Slots</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Cardinality and Range</th>
+<th>Description</th>
+<th>Inheritance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../seq_project_id/">seq_project_id</a></td>
+<td>1 <br/> <a href="../Integer/">Integer</a></td>
+<td>Project identifier, prefilled</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../seq_project_name/">seq_project_name</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Name of the project within which the sequencing was organized</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../sample_id/">sample_id</a></td>
+<td>1 <br/> <a href="../Integer/">Integer</a></td>
+<td>Unique identifier assigned to a material sample</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../seq_project_pi_name/">seq_project_pi_name</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Principal investigator name for the sequencing project</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../sample_contact_name/">sample_contact_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Contact person for the sample</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../tissue_contact_name/">tissue_contact_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Contact person for tissue-related questions</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../proposal_id/">proposal_id</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>Proposal identifier</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../tube_or_plate_label/">tube_or_plate_label</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Must be unique across all tubes and plates, and &lt;20 characters</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../sample_container/">sample_container</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Select tube or plate</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../plate_location/">plate_location</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Required if samples provided in a plate</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../biosafety_material_category/">biosafety_material_category</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Choose from Algae, Animal, Archaea, Bacteria, Fungi, Plant, Plasmid, Protist,...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../sample_name/">sample_name</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>A local identifier or name for the material sample</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../biological_replicate_sample_group_name/">biological_replicate_sample_group_name</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Samples that are biological replicates should have the same group name</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../combined_tissue_description/">combined_tissue_description</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The number and relationship between tissues if multiple tissue samples were c...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../experimental_time_point_number/">experimental_time_point_number</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>Integer number representing the sequential numbering of time points</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../experimental_time_point_description/">experimental_time_point_description</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Description of the time point sampled</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../genus/">genus</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Genus of the primary organism being sampled</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../species/">species</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Species of the primary organism being sampled</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../strain_variety_or_cultivar/">strain_variety_or_cultivar</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Name or ID of the cultivar, variety, strain, or other similar designation</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../isolate/">isolate</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Isolate or mutant name</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../germplasm_collection_and_id/">germplasm_collection_and_id</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Culture collection name and ID from which the original plant germplasm was so...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../ncbi_taxonomy_id/">ncbi_taxonomy_id</a></td>
+<td>1 <br/> <a href="../Integer/">Integer</a></td>
+<td>Unique identifier from the NCBI taxonomy database</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../ancestral_data/">ancestral_data</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about either pedigree or other description of ancestral informati...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../genetic_modification/">genetic_modification</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Genetic modifications of the genome of an organism</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../estimated_genome_size_mb/">estimated_genome_size_mb</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>Estimated genome size of the primary species being sampled, between 1-100000</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../gc_content_percent/">gc_content_percent</a></td>
+<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
+<td>Estimated GC content of the genome of the primary species being sampled</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../ploidy/">ploidy</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The ploidy level of the genome</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../reference_genome/">reference_genome</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Reference genome and annotation to be used for analysis</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../collection_date_and_time/">collection_date_and_time</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>The time of sampling, either as an instance or interval</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../sample_size/">sample_size</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>The total amount or size of sample collected</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../tissue/">tissue</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Detailed description of the organ or type of tissue sampled</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../tissue_plant_ontology_term/">tissue_plant_ontology_term</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Plant ontology term corresponding to plant structure sampled</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../geographic_location_region_and_locality/">geographic_location_region_and_locality</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The geographical origin of the sample as defined by country or sea name follo...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../geographic_location_latitude/">geographic_location_latitude</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>The geographical origin of the sample as defined by latitude</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../geographic_location_longitude/">geographic_location_longitude</a></td>
+<td>0..1 <br/> <a href="../Float/">Float</a></td>
+<td>The geographical origin of the sample as defined by longitude</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../depth_meters/">depth_meters</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The vertical distance (in meters) below local surface</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../elevation_meters/">elevation_meters</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Elevation (in meters) of the sampling site as measured by the vertical distan...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../temperature_celsius/">temperature_celsius</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Temperature (in degrees Celsius) of the sample at time of sampling</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../broad_scale_environmental_context/">broad_scale_environmental_context</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The major environmental system the sample or specimen came from</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../local_environmental_context/">local_environmental_context</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The entity or entities in the sample's local vicinity</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../environmental_medium/">environmental_medium</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The environmental material(s) immediately surrounding the sample at time of s...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../growth_facility/">growth_facility</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Type of facility where the sampled plant was grown</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../growth_medium/">growth_medium</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>General specification of the media for growing the plants or tissue cultured ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../growth_medium_composition/">growth_medium_composition</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Detailed description of the makeup of the plant growth medium</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../plant_age/">plant_age</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>The age of the plant from which the tissue was sampled</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../developmental_stage/">developmental_stage</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>The developmental stage of the plant from which the tissue was sampled</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../air_temperature_regimen/">air_temperature_regimen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about treatment involving an exposure to varying temperatures</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../antibiotic_regimen/">antibiotic_regimen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about treatment involving antibiotic administration</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../biotic_regimen/">biotic_regimen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about treatment involving use of biotic factors</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../inoculation_method/">inoculation_method</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Method and material used for inoculation or infiltration with a biotic agent</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../time_post_inoculation/">time_post_inoculation</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The time between inoculation with the biotic agent and sample collection</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../chemical_administration/">chemical_administration</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>List of chemical compounds administered to the host or site where sampling oc...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../chemical_mutagen/">chemical_mutagen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Treatment involving use of mutagens</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../fertilizer_administration/">fertilizer_administration</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about treatment involving the use of fertilizers</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../insecticide_regimen/">insecticide_regimen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about treatment involving use of insecticides</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../fungicide_regimen/">fungicide_regimen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about treatment involving use of fungicides</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../gaseous_environment/">gaseous_environment</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Use of conditions with differing gaseous environments</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../growth_hormone_regimen/">growth_hormone_regimen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about treatment involving use of growth hormones</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../herbicide_regimen/">herbicide_regimen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about treatment involving use of herbicides</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../humidity_regimen/">humidity_regimen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about treatment involving an exposure to varying degree of humidi...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../radiation_regimen/">radiation_regimen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about treatment involving exposure to a particular radiation regi...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../light_regimen/">light_regimen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about treatment involving an exposure to light</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../last_light_transition_type/">last_light_transition_type</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The most recent light transition before sampling</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../time_after_last_light_transition/">time_after_last_light_transition</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The time between sampling and the most recent light transition</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../salt_regimen/">salt_regimen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about treatment involving use of salts as supplement</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../rainfall_regimen/">rainfall_regimen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about treatment involving an exposure to a given amount of rainfa...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../watering_regimen/">watering_regimen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about treatment involving an exposure to watering frequencies</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../other_treatment_regimen/">other_treatment_regimen</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about treatments not captured by other available treatment catego...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../perturbation/">perturbation</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Type of perturbation coupled with perturbation regimen</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../mechanical_damage/">mechanical_damage</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Information about any mechanical damage exerted on the plant</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../observed_host_symbionts/">observed_host_symbionts</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The taxonomic name of organism(s) found living in symbiosis with the specific...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../plant_sex/">plant_sex</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Sex of the reproductive parts on the whole plant</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../sample_disease_status/">sample_disease_status</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>List of diseases with which the subject has been diagnosed at time of sample ...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../sample_disease_stage/">sample_disease_stage</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Stage of the disease at the time of sample collection</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../sample_material_processing/">sample_material_processing</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>A brief description of any processing applied to the sample</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../sample_storage_temperature_celsius/">sample_storage_temperature_celsius</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>Temperature at which sample was stored (in degrees Celsius)</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../sample_preservation_method/">sample_preservation_method</a></td>
+<td>1 <br/> <a href="../String/">String</a></td>
+<td>The method employed for preserving or fixing the tissue</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../harvest_to_preservation_time/">harvest_to_preservation_time</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The time between sampling and sample preservation, minutes</td>
+<td>direct</td>
+</tr>
+</tbody>
+</table>
+<h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
+<h3 id="schema-source">Schema Source</h3>
+<ul>
+<li>from schema: https://w3id.org/plant-tissue-metadata-schema</li>
+</ul>
+<h2 id="mappings">Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Mapping Type</th>
+<th>Mapped Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>self</td>
+<td>plant_tissue:PlantTissueSample</td>
+</tr>
+<tr>
+<td>native</td>
+<td>plant_tissue:PlantTissueSample</td>
+</tr>
+</tbody>
+</table>
+<h2 id="linkml-source">LinkML Source</h2>
+<!-- TODO: investigate https://stackoverflow.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->
+<h3 id="direct">Direct</h3>
+<details>
+<pre><code class="language-yaml">name: PlantTissueSample
+description: A sample of plant tissue with associated metadata
+from_schema: https://w3id.org/plant-tissue-metadata-schema
+slots:
+- seq_project_id
+- seq_project_name
+- sample_id
+- seq_project_pi_name
+- sample_contact_name
+- tissue_contact_name
+- proposal_id
+- tube_or_plate_label
+- sample_container
+- plate_location
+- biosafety_material_category
+- sample_name
+- biological_replicate_sample_group_name
+- combined_tissue_description
+- experimental_time_point_number
+- experimental_time_point_description
+- genus
+- species
+- strain_variety_or_cultivar
+- isolate
+- germplasm_collection_and_id
+- ncbi_taxonomy_id
+- ancestral_data
+- genetic_modification
+- estimated_genome_size_mb
+- gc_content_percent
+- ploidy
+- reference_genome
+- collection_date_and_time
+- sample_size
+- tissue
+- tissue_plant_ontology_term
+- geographic_location_region_and_locality
+- geographic_location_latitude
+- geographic_location_longitude
+- depth_meters
+- elevation_meters
+- temperature_celsius
+- broad_scale_environmental_context
+- local_environmental_context
+- environmental_medium
+- growth_facility
+- growth_medium
+- growth_medium_composition
+- plant_age
+- developmental_stage
+- air_temperature_regimen
+- antibiotic_regimen
+- biotic_regimen
+- inoculation_method
+- time_post_inoculation
+- chemical_administration
+- chemical_mutagen
+- fertilizer_administration
+- insecticide_regimen
+- fungicide_regimen
+- gaseous_environment
+- growth_hormone_regimen
+- herbicide_regimen
+- humidity_regimen
+- radiation_regimen
+- light_regimen
+- last_light_transition_type
+- time_after_last_light_transition
+- salt_regimen
+- rainfall_regimen
+- watering_regimen
+- other_treatment_regimen
+- perturbation
+- mechanical_damage
+- observed_host_symbionts
+- plant_sex
+- sample_disease_status
+- sample_disease_stage
+- sample_material_processing
+- sample_storage_temperature_celsius
+- sample_preservation_method
+- harvest_to_preservation_time
+
+</code></pre>
+</details>
+<h3 id="induced">Induced</h3>
+<details>
+<pre><code class="language-yaml">name: PlantTissueSample
+description: A sample of plant tissue with associated metadata
+from_schema: https://w3id.org/plant-tissue-metadata-schema
+attributes:
+  seq_project_id:
+    name: seq_project_id
+    description: Project identifier, prefilled
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000092
+    rank: 1000
+    alias: seq_project_id
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: integer
+    required: true
+  seq_project_name:
+    name: seq_project_name
+    description: Name of the project within which the sequencing was organized
+    examples:
+    - value: Forest soil metagenome
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000092
+    rank: 1000
+    alias: seq_project_name
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  sample_id:
+    name: sample_id
+    description: Unique identifier assigned to a material sample
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000026
+    rank: 1000
+    alias: sample_id
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: integer
+    required: true
+  seq_project_pi_name:
+    name: seq_project_pi_name
+    description: Principal investigator name for the sequencing project
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: seq_project_pi_name
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  sample_contact_name:
+    name: sample_contact_name
+    description: Contact person for the sample
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: sample_contact_name
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  tissue_contact_name:
+    name: tissue_contact_name
+    description: Contact person for tissue-related questions
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: tissue_contact_name
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  proposal_id:
+    name: proposal_id
+    description: Proposal identifier
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: proposal_id
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: integer
+  tube_or_plate_label:
+    name: tube_or_plate_label
+    description: Must be unique across all tubes and plates, and &lt;20 characters
+    examples:
+    - value: Sb_roots1
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: tube_or_plate_label
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  sample_container:
+    name: sample_container
+    description: Select tube or plate
+    examples:
+    - value: tube
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: sample_container
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  plate_location:
+    name: plate_location
+    description: Required if samples provided in a plate. for partial plates, fill
+      by columns
+    examples:
+    - value: B1
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: plate_location
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  biosafety_material_category:
+    name: biosafety_material_category
+    description: Choose from Algae, Animal, Archaea, Bacteria, Fungi, Plant, Plasmid,
+      Protist, Virus, Synthetic Construct
+    examples:
+    - value: Plant
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: biosafety_material_category
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  sample_name:
+    name: sample_name
+    description: A local identifier or name for the material sample
+    examples:
+    - value: sbicolor_3d_root_1-1
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001107
+    rank: 1000
+    alias: sample_name
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  biological_replicate_sample_group_name:
+    name: biological_replicate_sample_group_name
+    description: Samples that are biological replicates should have the same group
+      name
+    examples:
+    - value: sbicolor_3d_root
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: biological_replicate_sample_group_name
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  combined_tissue_description:
+    name: combined_tissue_description
+    description: The number and relationship between tissues if multiple tissue samples
+      were combined
+    examples:
+    - value: 6 lateral root tips from each of two plants
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: combined_tissue_description
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  experimental_time_point_number:
+    name: experimental_time_point_number
+    description: Integer number representing the sequential numbering of time points
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: experimental_time_point_number
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: integer
+  experimental_time_point_description:
+    name: experimental_time_point_description
+    description: Description of the time point sampled
+    examples:
+    - value: 3 days post germination
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: experimental_time_point_description
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  genus:
+    name: genus
+    description: Genus of the primary organism being sampled
+    examples:
+    - value: Sorghum
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000029
+    rank: 1000
+    alias: genus
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  species:
+    name: species
+    description: Species of the primary organism being sampled
+    examples:
+    - value: bicolor
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000029
+    rank: 1000
+    alias: species
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  strain_variety_or_cultivar:
+    name: strain_variety_or_cultivar
+    description: Name or ID of the cultivar, variety, strain, or other similar designation
+    examples:
+    - value: RTx430
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001318
+    rank: 1000
+    alias: strain_variety_or_cultivar
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  isolate:
+    name: isolate
+    description: Isolate or mutant name
+    examples:
+    - value: Sb_Mut1
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: isolate
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  germplasm_collection_and_id:
+    name: germplasm_collection_and_id
+    description: Culture collection name and ID from which the original plant germplasm
+      was sourced
+    examples:
+    - value: ABRC CS22561
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: germplasm_collection_and_id
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  ncbi_taxonomy_id:
+    name: ncbi_taxonomy_id
+    description: Unique identifier from the NCBI taxonomy database
+    examples:
+    - value: '4558'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000250
+    rank: 1000
+    alias: ncbi_taxonomy_id
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: integer
+    required: true
+  ancestral_data:
+    name: ancestral_data
+    description: Information about either pedigree or other description of ancestral
+      information
+    examples:
+    - value: Hybrid of A x B lines
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000247
+    rank: 1000
+    alias: ancestral_data
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  genetic_modification:
+    name: genetic_modification
+    description: Genetic modifications of the genome of an organism
+    examples:
+    - value: mlo-11 allele
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000859
+    rank: 1000
+    alias: genetic_modification
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^{PMID}|{DOI}|{URL}$
+  estimated_genome_size_mb:
+    name: estimated_genome_size_mb
+    description: Estimated genome size of the primary species being sampled, between
+      1-100000
+    examples:
+    - value: '730'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: estimated_genome_size_mb
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: integer
+  gc_content_percent:
+    name: gc_content_percent
+    description: Estimated GC content of the genome of the primary species being sampled
+    examples:
+    - value: '45'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: gc_content_percent
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: integer
+  ploidy:
+    name: ploidy
+    description: The ploidy level of the genome
+    examples:
+    - value: diploid
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000021
+    rank: 1000
+    alias: ploidy
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^([^\s-]{1,2}|[^\s-]+.+[^\s-]+) \[[a-zA-Z]{2,}:[a-zA-Z0-9]\d+\]$
+  reference_genome:
+    name: reference_genome
+    description: Reference genome and annotation to be used for analysis
+    examples:
+    - value: Phytozome Sorghum bicolor RTx430 v2.1
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: reference_genome
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  collection_date_and_time:
+    name: collection_date_and_time
+    description: The time of sampling, either as an instance or interval
+    examples:
+    - value: '2025-08-10T14:00:00-07:00'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000011
+    rank: 1000
+    alias: collection_date_and_time
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  sample_size:
+    name: sample_size
+    description: The total amount or size of sample collected
+    examples:
+    - value: 0.45 g
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000001
+    rank: 1000
+    alias: sample_size
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  tissue:
+    name: tissue
+    description: Detailed description of the organ or type of tissue sampled
+    examples:
+    - value: 5 mm lateral root tips
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: tissue
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  tissue_plant_ontology_term:
+    name: tissue_plant_ontology_term
+    description: Plant ontology term corresponding to plant structure sampled
+    examples:
+    - value: seedling cotyledon (PO:0025471);  seedling hypocotyl (PO:0025291)
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001060
+    rank: 1000
+    alias: tissue_plant_ontology_term
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^([^\s-]{1,2}|[^\s-]+.+[^\s-]+) \[[a-zA-Z]{2,}:[a-zA-Z0-9]\d+\]$
+  geographic_location_region_and_locality:
+    name: geographic_location_region_and_locality
+    description: The geographical origin of the sample as defined by country or sea
+      name followed by specific region name
+    examples:
+    - value: 'USA: California, Berkeley'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000010
+    rank: 1000
+    alias: geographic_location_region_and_locality
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: '^([^\s-]{1,2}|[^\s-]+.+[^\s-]+): ([^\s-]{1,2}|[^\s-]+.+[^\s-]+), ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$'
+  geographic_location_latitude:
+    name: geographic_location_latitude
+    description: The geographical origin of the sample as defined by latitude
+    examples:
+    - value: '37.877184'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000009
+    rank: 1000
+    alias: geographic_location_latitude
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: float
+  geographic_location_longitude:
+    name: geographic_location_longitude
+    description: The geographical origin of the sample as defined by longitude
+    examples:
+    - value: '-122.250841'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000009
+    rank: 1000
+    alias: geographic_location_longitude
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: float
+  depth_meters:
+    name: depth_meters
+    description: The vertical distance (in meters) below local surface
+    examples:
+    - value: '0.1'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000018
+    rank: 1000
+    alias: depth_meters
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  elevation_meters:
+    name: elevation_meters
+    description: Elevation (in meters) of the sampling site as measured by the vertical
+      distance from mean sea level
+    examples:
+    - value: '120'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000093
+    rank: 1000
+    alias: elevation_meters
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  temperature_celsius:
+    name: temperature_celsius
+    description: Temperature (in degrees Celsius) of the sample at time of sampling
+    examples:
+    - value: '22'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000113
+    rank: 1000
+    alias: temperature_celsius
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  broad_scale_environmental_context:
+    name: broad_scale_environmental_context
+    description: The major environmental system the sample or specimen came from
+    examples:
+    - value: rangeland biome [ENVO:01000247]
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000012
+    rank: 1000
+    alias: broad_scale_environmental_context
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^([^\s-]{1,2}|[^\s-]+.+[^\s-]+) \[[a-zA-Z]{2,}:[a-zA-Z0-9]\d+\]$
+  local_environmental_context:
+    name: local_environmental_context
+    description: The entity or entities in the sample's local vicinity
+    examples:
+    - value: hillside [ENVO:01000333]
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000013
+    rank: 1000
+    alias: local_environmental_context
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  environmental_medium:
+    name: environmental_medium
+    description: The environmental material(s) immediately surrounding the sample
+      at time of sampling
+    examples:
+    - value: bluegrass field soil [ENVO:00005789]
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000014
+    rank: 1000
+    alias: environmental_medium
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^([^\s-]{1,2}|[^\s-]+.+[^\s-]+) \[[a-zA-Z]{2,}:[a-zA-Z0-9]\d+\]$
+  growth_facility:
+    name: growth_facility
+    description: Type of facility where the sampled plant was grown
+    examples:
+    - value: greenhouse
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001043
+    rank: 1000
+    alias: growth_facility
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  growth_medium:
+    name: growth_medium
+    description: General specification of the media for growing the plants or tissue
+      cultured samples
+    examples:
+    - value: soil
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001057
+    rank: 1000
+    alias: growth_medium
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  growth_medium_composition:
+    name: growth_medium_composition
+    description: Detailed description of the makeup of the plant growth medium
+    examples:
+    - value: 2:1:1 mix of coco coir, sand, and vermiculite
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: growth_medium_composition
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  plant_age:
+    name: plant_age
+    description: The age of the plant from which the tissue was sampled
+    examples:
+    - value: 3 days post germination
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000255
+    rank: 1000
+    alias: plant_age
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  developmental_stage:
+    name: developmental_stage
+    description: The developmental stage of the plant from which the tissue was sampled
+    examples:
+    - value: seedling
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000251
+    rank: 1000
+    alias: developmental_stage
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  air_temperature_regimen:
+    name: air_temperature_regimen
+    description: Information about treatment involving an exposure to varying temperatures
+    examples:
+    - value: 22�C 12h day / 18�C 12h night
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000551
+    rank: 1000
+    alias: air_temperature_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  antibiotic_regimen:
+    name: antibiotic_regimen
+    description: Information about treatment involving antibiotic administration
+    examples:
+    - value: kanamycin 50 ug/mL added to agar plates for the full duration of growth
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000553
+    rank: 1000
+    alias: antibiotic_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  biotic_regimen:
+    name: biotic_regimen
+    description: Information about treatment involving use of biotic factors
+    examples:
+    - value: Agrobacterium tumefaciens GV3101 infiltration
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001038
+    rank: 1000
+    alias: biotic_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  inoculation_method:
+    name: inoculation_method
+    description: Method and material used for inoculation or infiltration with a biotic
+      agent
+    examples:
+    - value: syringe infiltration with GV3101 (OD600=0.5) carrying pCAMBIA1300-35S::GFP
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: inoculation_method
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  time_post_inoculation:
+    name: time_post_inoculation
+    description: The time between inoculation with the biotic agent and sample collection
+    examples:
+    - value: '2:12:00'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: time_post_inoculation
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  chemical_administration:
+    name: chemical_administration
+    description: List of chemical compounds administered to the host or site where
+      sampling occurred
+    examples:
+    - value: 50 mM KNO3 fertilizer, weekly
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000751
+    rank: 1000
+    alias: chemical_administration
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  chemical_mutagen:
+    name: chemical_mutagen
+    description: Treatment involving use of mutagens
+    examples:
+    - value: seeds soaked in EMS, 0.1%, 6h exposure before planting
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000555
+    rank: 1000
+    alias: chemical_mutagen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  fertilizer_administration:
+    name: fertilizer_administration
+    description: Information about treatment involving the use of fertilizers
+    examples:
+    - value: 0.5x Hoagland's solution, weekly
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000556
+    rank: 1000
+    alias: fertilizer_administration
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  insecticide_regimen:
+    name: insecticide_regimen
+    description: Information about treatment involving use of insecticides
+    examples:
+    - value: imidacloprid, 0.5 mg/L, soil drench at time of planting
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000573
+    rank: 1000
+    alias: insecticide_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  fungicide_regimen:
+    name: fungicide_regimen
+    description: Information about treatment involving use of fungicides
+    examples:
+    - value: azoxystrobin, 100 ppm, foliar spray once at weeks 2, 3, and 4
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000557
+    rank: 1000
+    alias: fungicide_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  gaseous_environment:
+    name: gaseous_environment
+    description: Use of conditions with differing gaseous environments
+    examples:
+    - value: elevated CO2, 600 ppm, continuous
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000558
+    rank: 1000
+    alias: gaseous_environment
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  growth_hormone_regimen:
+    name: growth_hormone_regimen
+    description: Information about treatment involving use of growth hormones
+    examples:
+    - value: IAA 1 �M for 24h at 6 days old, followed by transfer to control condition
+        without hormone for 48h before sampling
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000560
+    rank: 1000
+    alias: growth_hormone_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  herbicide_regimen:
+    name: herbicide_regimen
+    description: Information about treatment involving use of herbicides
+    examples:
+    - value: glyphosate 10 �M, foliar spray, once at 2 weeks
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000561
+    rank: 1000
+    alias: herbicide_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  humidity_regimen:
+    name: humidity_regimen
+    description: Information about treatment involving an exposure to varying degree
+      of humidity
+    examples:
+    - value: 65% RH, constant
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000568
+    rank: 1000
+    alias: humidity_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  radiation_regimen:
+    name: radiation_regimen
+    description: Information about treatment involving exposure to a particular radiation
+      regimen
+    examples:
+    - value: UV-B 1.5 W/m2, 2h/day, for 5 days starting at day 7
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000575
+    rank: 1000
+    alias: radiation_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  light_regimen:
+    name: light_regimen
+    description: Information about treatment involving an exposure to light
+    examples:
+    - value: 150 �mol m-2 s-1, 16h light / 8h dark
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000569
+    rank: 1000
+    alias: light_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  last_light_transition_type:
+    name: last_light_transition_type
+    description: The most recent light transition before sampling
+    examples:
+    - value: lights on
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: last_light_transition_type
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  time_after_last_light_transition:
+    name: time_after_last_light_transition
+    description: The time between sampling and the most recent light transition
+    examples:
+    - value: '2:00'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: time_after_last_light_transition
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  salt_regimen:
+    name: salt_regimen
+    description: Information about treatment involving use of salts as supplement
+    examples:
+    - value: NaCl 100 mM added to hydroponic medium at day 3, followed by transfer
+        to fresh hydroponic medium without elevated NaCl for 3 days before sampling
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000582
+    rank: 1000
+    alias: salt_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  rainfall_regimen:
+    name: rainfall_regimen
+    description: Information about treatment involving an exposure to a given amount
+      of rainfall
+    examples:
+    - value: 30cm of rainfall during growing season
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000576
+    rank: 1000
+    alias: rainfall_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  watering_regimen:
+    name: watering_regimen
+    description: Information about treatment involving an exposure to watering frequencies
+    examples:
+    - value: 100 ml per pot every 3 days
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000591
+    rank: 1000
+    alias: watering_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  other_treatment_regimen:
+    name: other_treatment_regimen
+    description: Information about treatments not captured by other available treatment
+      categories
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: other_treatment_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  perturbation:
+    name: perturbation
+    description: Type of perturbation coupled with perturbation regimen
+    examples:
+    - value: drought stress beginning at 8 weeks for a period of 4 weeks
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000754
+    rank: 1000
+    alias: perturbation
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  mechanical_damage:
+    name: mechanical_damage
+    description: Information about any mechanical damage exerted on the plant
+    examples:
+    - value: root wounding, 24h before sampling
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001052
+    rank: 1000
+    alias: mechanical_damage
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  observed_host_symbionts:
+    name: observed_host_symbionts
+    description: The taxonomic name of organism(s) found living in symbiosis with
+      the specific host
+    examples:
+    - value: arbuscular mycorrhizal fungi
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001298
+    rank: 1000
+    alias: observed_host_symbionts
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  plant_sex:
+    name: plant_sex
+    description: Sex of the reproductive parts on the whole plant
+    examples:
+    - value: hermaphrodite
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001059
+    rank: 1000
+    alias: plant_sex
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  sample_disease_status:
+    name: sample_disease_status
+    description: List of diseases with which the subject has been diagnosed at time
+      of sample collection
+    examples:
+    - value: infection with Pseudomonas syringae pv. tomato DC3000
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000031
+    rank: 1000
+    alias: sample_disease_status
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  sample_disease_stage:
+    name: sample_disease_stage
+    description: Stage of the disease at the time of sample collection
+    examples:
+    - value: infection
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000249
+    rank: 1000
+    alias: sample_disease_stage
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  sample_material_processing:
+    name: sample_material_processing
+    description: A brief description of any processing applied to the sample
+    examples:
+    - value: roots were removed from pots rinsed with tap water before flash freezing
+        with liquid nitrogen
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000016
+    rank: 1000
+    alias: sample_material_processing
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  sample_storage_temperature_celsius:
+    name: sample_storage_temperature_celsius
+    description: Temperature at which sample was stored (in degrees Celsius)
+    examples:
+    - value: '-80'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000110
+    rank: 1000
+    alias: sample_storage_temperature_celsius
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  sample_preservation_method:
+    name: sample_preservation_method
+    description: The method employed for preserving or fixing the tissue
+    examples:
+    - value: N2 Freeze
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: sample_preservation_method
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  harvest_to_preservation_time:
+    name: harvest_to_preservation_time
+    description: The time between sampling and sample preservation, minutes
+    examples:
+    - value: '15'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: harvest_to_preservation_time
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+
+</code></pre>
+</details>
+</article>
+</div>
+<script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../..", "features": ["content.tabs.link"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+<script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+<script type="module">import mermaid from "https://unpkg.com/mermaid@11.4.1/dist/mermaid.esm.min.mjs";
+mermaid.initialize({});</script></body>
+</html>

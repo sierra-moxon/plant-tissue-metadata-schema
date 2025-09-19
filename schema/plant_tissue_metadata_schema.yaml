@@ -1,0 +1,1488 @@
+name: plant-tissue-metadata-schema
+description: 'A LinkML schema for capturing metadata about plant tissue samples, including
+  experimental conditions,
+
+  treatments, and sample processing information. Designed for compatibility with MIXS
+  standards.'
+title: Plant Tissue Metadata Schema
+see_also:
+- https://github.com/GenomicsStandardsConsortium/mixs
+id: https://w3id.org/plant-tissue-metadata-schema
+imports:
+- linkml:types
+license: MIT
+prefixes:
+  linkml:
+    prefix_prefix: linkml
+    prefix_reference: https://w3id.org/linkml/
+  plant_tissue:
+    prefix_prefix: plant_tissue
+    prefix_reference: https://w3id.org/plant-tissue-metadata-schema/
+  mixs:
+    prefix_prefix: mixs
+    prefix_reference: https://w3id.org/mixs/
+  po:
+    prefix_prefix: po
+    prefix_reference: http://purl.obolibrary.org/obo/PO_
+  envo:
+    prefix_prefix: envo
+    prefix_reference: http://purl.obolibrary.org/obo/ENVO_
+  pato:
+    prefix_prefix: pato
+    prefix_reference: http://purl.obolibrary.org/obo/PATO_
+  orcid:
+    prefix_prefix: orcid
+    prefix_reference: https://orcid.org/
+default_prefix: plant_tissue
+default_range: string
+types:
+  string:
+    name: string
+    definition_uri: https://w3id.org/linkml/String
+    description: A character string
+    notes:
+    - In RDF serializations, a slot with range of string is treated as a literal or
+      type xsd:string.   If you are authoring schemas in LinkML YAML, the type is
+      referenced with the lower case "string".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    exact_mappings:
+    - schema:Text
+    base: str
+    uri: xsd:string
+  integer:
+    name: integer
+    definition_uri: https://w3id.org/linkml/Integer
+    description: An integer
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "integer".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    exact_mappings:
+    - schema:Integer
+    base: int
+    uri: xsd:integer
+  boolean:
+    name: boolean
+    definition_uri: https://w3id.org/linkml/Boolean
+    description: A binary (true or false) value
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "boolean".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    exact_mappings:
+    - schema:Boolean
+    base: Bool
+    uri: xsd:boolean
+    repr: bool
+  float:
+    name: float
+    definition_uri: https://w3id.org/linkml/Float
+    description: A real number that conforms to the xsd:float specification
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "float".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    exact_mappings:
+    - schema:Float
+    base: float
+    uri: xsd:float
+  double:
+    name: double
+    definition_uri: https://w3id.org/linkml/Double
+    description: A real number that conforms to the xsd:double specification
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "double".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    close_mappings:
+    - schema:Float
+    base: float
+    uri: xsd:double
+  decimal:
+    name: decimal
+    definition_uri: https://w3id.org/linkml/Decimal
+    description: A real number with arbitrary precision that conforms to the xsd:decimal
+      specification
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "decimal".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    broad_mappings:
+    - schema:Number
+    base: Decimal
+    uri: xsd:decimal
+  time:
+    name: time
+    definition_uri: https://w3id.org/linkml/Time
+    description: A time object represents a (local) time of day, independent of any
+      particular day
+    notes:
+    - URI is dateTime because OWL reasoners do not work with straight date or time
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "time".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    exact_mappings:
+    - schema:Time
+    base: XSDTime
+    uri: xsd:time
+    repr: str
+  date:
+    name: date
+    definition_uri: https://w3id.org/linkml/Date
+    description: a date (year, month and day) in an idealized calendar
+    notes:
+    - URI is dateTime because OWL reasoners don't work with straight date or time
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "date".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    exact_mappings:
+    - schema:Date
+    base: XSDDate
+    uri: xsd:date
+    repr: str
+  datetime:
+    name: datetime
+    definition_uri: https://w3id.org/linkml/Datetime
+    description: The combination of a date and time
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "datetime".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    exact_mappings:
+    - schema:DateTime
+    base: XSDDateTime
+    uri: xsd:dateTime
+    repr: str
+  date_or_datetime:
+    name: date_or_datetime
+    definition_uri: https://w3id.org/linkml/DateOrDatetime
+    description: Either a date or a datetime
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "date_or_datetime".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: str
+    uri: linkml:DateOrDatetime
+    repr: str
+  uriorcurie:
+    name: uriorcurie
+    definition_uri: https://w3id.org/linkml/Uriorcurie
+    description: a URI or a CURIE
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "uriorcurie".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: URIorCURIE
+    uri: xsd:anyURI
+    repr: str
+  curie:
+    name: curie
+    definition_uri: https://w3id.org/linkml/Curie
+    conforms_to: https://www.w3.org/TR/curie/
+    description: a compact URI
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "curie".
+    comments:
+    - in RDF serializations this MUST be expanded to a URI
+    - in non-RDF serializations MAY be serialized as the compact representation
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: Curie
+    uri: xsd:string
+    repr: str
+  uri:
+    name: uri
+    definition_uri: https://w3id.org/linkml/Uri
+    conforms_to: https://www.ietf.org/rfc/rfc3987.txt
+    description: a complete URI
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "uri".
+    comments:
+    - in RDF serializations a slot with range of uri is treated as a literal or type
+      xsd:anyURI unless it is an identifier or a reference to an identifier, in which
+      case it is translated directly to a node
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    close_mappings:
+    - schema:URL
+    base: URI
+    uri: xsd:anyURI
+    repr: str
+  ncname:
+    name: ncname
+    definition_uri: https://w3id.org/linkml/Ncname
+    description: Prefix part of CURIE
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "ncname".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: NCName
+    uri: xsd:string
+    repr: str
+  objectidentifier:
+    name: objectidentifier
+    definition_uri: https://w3id.org/linkml/Objectidentifier
+    description: A URI or CURIE that represents an object in the model.
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "objectidentifier".
+    comments:
+    - Used for inheritance and type checking
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: ElementIdentifier
+    uri: shex:iri
+    repr: str
+  nodeidentifier:
+    name: nodeidentifier
+    definition_uri: https://w3id.org/linkml/Nodeidentifier
+    description: A URI, CURIE or BNODE that represents a node in a model.
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "nodeidentifier".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: NodeIdentifier
+    uri: shex:nonLiteral
+    repr: str
+  jsonpointer:
+    name: jsonpointer
+    definition_uri: https://w3id.org/linkml/Jsonpointer
+    conforms_to: https://datatracker.ietf.org/doc/html/rfc6901
+    description: A string encoding a JSON Pointer. The value of the string MUST conform
+      to JSON Point syntax and SHOULD dereference to a valid object within the current
+      instance document when encoded in tree form.
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "jsonpointer".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: str
+    uri: xsd:string
+    repr: str
+  jsonpath:
+    name: jsonpath
+    definition_uri: https://w3id.org/linkml/Jsonpath
+    conforms_to: https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html
+    description: A string encoding a JSON Path. The value of the string MUST conform
+      to JSON Point syntax and SHOULD dereference to zero or more valid objects within
+      the current instance document when encoded in tree form.
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "jsonpath".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: str
+    uri: xsd:string
+    repr: str
+  sparqlpath:
+    name: sparqlpath
+    definition_uri: https://w3id.org/linkml/Sparqlpath
+    conforms_to: https://www.w3.org/TR/sparql11-query/#propertypaths
+    description: A string encoding a SPARQL Property Path. The value of the string
+      MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects
+      within the current instance document when encoded as RDF.
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "sparqlpath".
+    from_schema: https://w3id.org/linkml/types
+    imported_from: linkml:types
+    base: str
+    uri: xsd:string
+    repr: str
+slots:
+  seq_project_id:
+    name: seq_project_id
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/seq_project_id
+    description: Project identifier, prefilled
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000092
+    slot_uri: plant_tissue:seq_project_id
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: integer
+    required: true
+  seq_project_name:
+    name: seq_project_name
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/seq_project_name
+    description: Name of the project within which the sequencing was organized
+    examples:
+    - value: Forest soil metagenome
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000092
+    slot_uri: plant_tissue:seq_project_name
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  sample_id:
+    name: sample_id
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/sample_id
+    description: Unique identifier assigned to a material sample
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000026
+    slot_uri: plant_tissue:sample_id
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: integer
+    required: true
+  seq_project_pi_name:
+    name: seq_project_pi_name
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/seq_project_pi_name
+    description: Principal investigator name for the sequencing project
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:seq_project_pi_name
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  sample_contact_name:
+    name: sample_contact_name
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/sample_contact_name
+    description: Contact person for the sample
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:sample_contact_name
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  tissue_contact_name:
+    name: tissue_contact_name
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/tissue_contact_name
+    description: Contact person for tissue-related questions
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:tissue_contact_name
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  proposal_id:
+    name: proposal_id
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/proposal_id
+    description: Proposal identifier
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:proposal_id
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: integer
+  tube_or_plate_label:
+    name: tube_or_plate_label
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/tube_or_plate_label
+    description: Must be unique across all tubes and plates, and <20 characters
+    examples:
+    - value: Sb_roots1
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:tube_or_plate_label
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  sample_container:
+    name: sample_container
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/sample_container
+    description: Select tube or plate
+    examples:
+    - value: tube
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:sample_container
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  plate_location:
+    name: plate_location
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/plate_location
+    description: Required if samples provided in a plate. for partial plates, fill
+      by columns
+    examples:
+    - value: B1
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:plate_location
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  biosafety_material_category:
+    name: biosafety_material_category
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/biosafety_material_category
+    description: Choose from Algae, Animal, Archaea, Bacteria, Fungi, Plant, Plasmid,
+      Protist, Virus, Synthetic Construct
+    examples:
+    - value: Plant
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:biosafety_material_category
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  sample_name:
+    name: sample_name
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/sample_name
+    description: A local identifier or name for the material sample
+    examples:
+    - value: sbicolor_3d_root_1-1
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001107
+    slot_uri: plant_tissue:sample_name
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  biological_replicate_sample_group_name:
+    name: biological_replicate_sample_group_name
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/biological_replicate_sample_group_name
+    description: Samples that are biological replicates should have the same group
+      name
+    examples:
+    - value: sbicolor_3d_root
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:biological_replicate_sample_group_name
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  combined_tissue_description:
+    name: combined_tissue_description
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/combined_tissue_description
+    description: The number and relationship between tissues if multiple tissue samples
+      were combined
+    examples:
+    - value: 6 lateral root tips from each of two plants
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:combined_tissue_description
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  experimental_time_point_number:
+    name: experimental_time_point_number
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/experimental_time_point_number
+    description: Integer number representing the sequential numbering of time points
+    examples:
+    - value: '1'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:experimental_time_point_number
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: integer
+  experimental_time_point_description:
+    name: experimental_time_point_description
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/experimental_time_point_description
+    description: Description of the time point sampled
+    examples:
+    - value: 3 days post germination
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:experimental_time_point_description
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  genus:
+    name: genus
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/genus
+    description: Genus of the primary organism being sampled
+    examples:
+    - value: Sorghum
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000029
+    slot_uri: plant_tissue:genus
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  species:
+    name: species
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/species
+    description: Species of the primary organism being sampled
+    examples:
+    - value: bicolor
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000029
+    slot_uri: plant_tissue:species
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  strain_variety_or_cultivar:
+    name: strain_variety_or_cultivar
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/strain_variety_or_cultivar
+    description: Name or ID of the cultivar, variety, strain, or other similar designation
+    examples:
+    - value: RTx430
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001318
+    slot_uri: plant_tissue:strain_variety_or_cultivar
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  isolate:
+    name: isolate
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/isolate
+    description: Isolate or mutant name
+    examples:
+    - value: Sb_Mut1
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:isolate
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  germplasm_collection_and_id:
+    name: germplasm_collection_and_id
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/germplasm_collection_and_id
+    description: Culture collection name and ID from which the original plant germplasm
+      was sourced
+    examples:
+    - value: ABRC CS22561
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:germplasm_collection_and_id
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  ncbi_taxonomy_id:
+    name: ncbi_taxonomy_id
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/ncbi_taxonomy_id
+    description: Unique identifier from the NCBI taxonomy database
+    examples:
+    - value: '4558'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000250
+    slot_uri: plant_tissue:ncbi_taxonomy_id
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: integer
+    required: true
+  ancestral_data:
+    name: ancestral_data
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/ancestral_data
+    description: Information about either pedigree or other description of ancestral
+      information
+    examples:
+    - value: Hybrid of A x B lines
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000247
+    slot_uri: plant_tissue:ancestral_data
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  genetic_modification:
+    name: genetic_modification
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/genetic_modification
+    description: Genetic modifications of the genome of an organism
+    examples:
+    - value: mlo-11 allele
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000859
+    slot_uri: plant_tissue:genetic_modification
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^{PMID}|{DOI}|{URL}$
+  estimated_genome_size_mb:
+    name: estimated_genome_size_mb
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/estimated_genome_size_mb
+    description: Estimated genome size of the primary species being sampled, between
+      1-100000
+    examples:
+    - value: '730'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:estimated_genome_size_mb
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: integer
+  gc_content_percent:
+    name: gc_content_percent
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/gc_content_percent
+    description: Estimated GC content of the genome of the primary species being sampled
+    examples:
+    - value: '45'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:gc_content_percent
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: integer
+  ploidy:
+    name: ploidy
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/ploidy
+    description: The ploidy level of the genome
+    examples:
+    - value: diploid
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000021
+    slot_uri: plant_tissue:ploidy
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^([^\s-]{1,2}|[^\s-]+.+[^\s-]+) \[[a-zA-Z]{2,}:[a-zA-Z0-9]\d+\]$
+  reference_genome:
+    name: reference_genome
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/reference_genome
+    description: Reference genome and annotation to be used for analysis
+    examples:
+    - value: Phytozome Sorghum bicolor RTx430 v2.1
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:reference_genome
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  collection_date_and_time:
+    name: collection_date_and_time
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/collection_date_and_time
+    description: The time of sampling, either as an instance or interval
+    examples:
+    - value: '2025-08-10T14:00:00-07:00'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000011
+    slot_uri: plant_tissue:collection_date_and_time
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  sample_size:
+    name: sample_size
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/sample_size
+    description: The total amount or size of sample collected
+    examples:
+    - value: 0.45 g
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000001
+    slot_uri: plant_tissue:sample_size
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  tissue:
+    name: tissue
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/tissue
+    description: Detailed description of the organ or type of tissue sampled
+    examples:
+    - value: 5 mm lateral root tips
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:tissue
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  tissue_plant_ontology_term:
+    name: tissue_plant_ontology_term
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/tissue_plant_ontology_term
+    description: Plant ontology term corresponding to plant structure sampled
+    examples:
+    - value: seedling cotyledon (PO:0025471);  seedling hypocotyl (PO:0025291)
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001060
+    slot_uri: plant_tissue:tissue_plant_ontology_term
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^([^\s-]{1,2}|[^\s-]+.+[^\s-]+) \[[a-zA-Z]{2,}:[a-zA-Z0-9]\d+\]$
+  geographic_location_region_and_locality:
+    name: geographic_location_region_and_locality
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/geographic_location_region_and_locality
+    description: The geographical origin of the sample as defined by country or sea
+      name followed by specific region name
+    examples:
+    - value: 'USA: California, Berkeley'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000010
+    slot_uri: plant_tissue:geographic_location_region_and_locality
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: '^([^\s-]{1,2}|[^\s-]+.+[^\s-]+): ([^\s-]{1,2}|[^\s-]+.+[^\s-]+), ([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$'
+  geographic_location_latitude:
+    name: geographic_location_latitude
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/geographic_location_latitude
+    description: The geographical origin of the sample as defined by latitude
+    examples:
+    - value: '37.877184'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000009
+    slot_uri: plant_tissue:geographic_location_latitude
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: float
+  geographic_location_longitude:
+    name: geographic_location_longitude
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/geographic_location_longitude
+    description: The geographical origin of the sample as defined by longitude
+    examples:
+    - value: '-122.250841'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000009
+    slot_uri: plant_tissue:geographic_location_longitude
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: float
+  depth_meters:
+    name: depth_meters
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/depth_meters
+    description: The vertical distance (in meters) below local surface
+    examples:
+    - value: '0.1'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000018
+    slot_uri: plant_tissue:depth_meters
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  elevation_meters:
+    name: elevation_meters
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/elevation_meters
+    description: Elevation (in meters) of the sampling site as measured by the vertical
+      distance from mean sea level
+    examples:
+    - value: '120'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000093
+    slot_uri: plant_tissue:elevation_meters
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  temperature_celsius:
+    name: temperature_celsius
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/temperature_celsius
+    description: Temperature (in degrees Celsius) of the sample at time of sampling
+    examples:
+    - value: '22'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000113
+    slot_uri: plant_tissue:temperature_celsius
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  broad_scale_environmental_context:
+    name: broad_scale_environmental_context
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/broad_scale_environmental_context
+    description: The major environmental system the sample or specimen came from
+    examples:
+    - value: rangeland biome [ENVO:01000247]
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000012
+    slot_uri: plant_tissue:broad_scale_environmental_context
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^([^\s-]{1,2}|[^\s-]+.+[^\s-]+) \[[a-zA-Z]{2,}:[a-zA-Z0-9]\d+\]$
+  local_environmental_context:
+    name: local_environmental_context
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/local_environmental_context
+    description: The entity or entities in the sample's local vicinity
+    examples:
+    - value: hillside [ENVO:01000333]
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000013
+    slot_uri: plant_tissue:local_environmental_context
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  environmental_medium:
+    name: environmental_medium
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/environmental_medium
+    description: The environmental material(s) immediately surrounding the sample
+      at time of sampling
+    examples:
+    - value: bluegrass field soil [ENVO:00005789]
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000014
+    slot_uri: plant_tissue:environmental_medium
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    pattern: ^([^\s-]{1,2}|[^\s-]+.+[^\s-]+) \[[a-zA-Z]{2,}:[a-zA-Z0-9]\d+\]$
+  growth_facility:
+    name: growth_facility
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/growth_facility
+    description: Type of facility where the sampled plant was grown
+    examples:
+    - value: greenhouse
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001043
+    slot_uri: plant_tissue:growth_facility
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  growth_medium:
+    name: growth_medium
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/growth_medium
+    description: General specification of the media for growing the plants or tissue
+      cultured samples
+    examples:
+    - value: soil
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001057
+    slot_uri: plant_tissue:growth_medium
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  growth_medium_composition:
+    name: growth_medium_composition
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/growth_medium_composition
+    description: Detailed description of the makeup of the plant growth medium
+    examples:
+    - value: 2:1:1 mix of coco coir, sand, and vermiculite
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:growth_medium_composition
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  plant_age:
+    name: plant_age
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/plant_age
+    description: The age of the plant from which the tissue was sampled
+    examples:
+    - value: 3 days post germination
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000255
+    slot_uri: plant_tissue:plant_age
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  developmental_stage:
+    name: developmental_stage
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/developmental_stage
+    description: The developmental stage of the plant from which the tissue was sampled
+    examples:
+    - value: seedling
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000251
+    slot_uri: plant_tissue:developmental_stage
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  air_temperature_regimen:
+    name: air_temperature_regimen
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/air_temperature_regimen
+    description: Information about treatment involving an exposure to varying temperatures
+    examples:
+    - value: "22\uFFFDC 12h day / 18\uFFFDC 12h night"
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000551
+    slot_uri: plant_tissue:air_temperature_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  antibiotic_regimen:
+    name: antibiotic_regimen
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/antibiotic_regimen
+    description: Information about treatment involving antibiotic administration
+    examples:
+    - value: kanamycin 50 ug/mL added to agar plates for the full duration of growth
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000553
+    slot_uri: plant_tissue:antibiotic_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  biotic_regimen:
+    name: biotic_regimen
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/biotic_regimen
+    description: Information about treatment involving use of biotic factors
+    examples:
+    - value: Agrobacterium tumefaciens GV3101 infiltration
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001038
+    slot_uri: plant_tissue:biotic_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  inoculation_method:
+    name: inoculation_method
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/inoculation_method
+    description: Method and material used for inoculation or infiltration with a biotic
+      agent
+    examples:
+    - value: syringe infiltration with GV3101 (OD600=0.5) carrying pCAMBIA1300-35S::GFP
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:inoculation_method
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  time_post_inoculation:
+    name: time_post_inoculation
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/time_post_inoculation
+    description: The time between inoculation with the biotic agent and sample collection
+    examples:
+    - value: '2:12:00'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:time_post_inoculation
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  chemical_administration:
+    name: chemical_administration
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/chemical_administration
+    description: List of chemical compounds administered to the host or site where
+      sampling occurred
+    examples:
+    - value: 50 mM KNO3 fertilizer, weekly
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000751
+    slot_uri: plant_tissue:chemical_administration
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  chemical_mutagen:
+    name: chemical_mutagen
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/chemical_mutagen
+    description: Treatment involving use of mutagens
+    examples:
+    - value: seeds soaked in EMS, 0.1%, 6h exposure before planting
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000555
+    slot_uri: plant_tissue:chemical_mutagen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  fertilizer_administration:
+    name: fertilizer_administration
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/fertilizer_administration
+    description: Information about treatment involving the use of fertilizers
+    examples:
+    - value: 0.5x Hoagland's solution, weekly
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000556
+    slot_uri: plant_tissue:fertilizer_administration
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  insecticide_regimen:
+    name: insecticide_regimen
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/insecticide_regimen
+    description: Information about treatment involving use of insecticides
+    examples:
+    - value: imidacloprid, 0.5 mg/L, soil drench at time of planting
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000573
+    slot_uri: plant_tissue:insecticide_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  fungicide_regimen:
+    name: fungicide_regimen
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/fungicide_regimen
+    description: Information about treatment involving use of fungicides
+    examples:
+    - value: azoxystrobin, 100 ppm, foliar spray once at weeks 2, 3, and 4
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000557
+    slot_uri: plant_tissue:fungicide_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  gaseous_environment:
+    name: gaseous_environment
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/gaseous_environment
+    description: Use of conditions with differing gaseous environments
+    examples:
+    - value: elevated CO2, 600 ppm, continuous
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000558
+    slot_uri: plant_tissue:gaseous_environment
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  growth_hormone_regimen:
+    name: growth_hormone_regimen
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/growth_hormone_regimen
+    description: Information about treatment involving use of growth hormones
+    examples:
+    - value: "IAA 1 \uFFFDM for 24h at 6 days old, followed by transfer to control\
+        \ condition without hormone for 48h before sampling"
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000560
+    slot_uri: plant_tissue:growth_hormone_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  herbicide_regimen:
+    name: herbicide_regimen
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/herbicide_regimen
+    description: Information about treatment involving use of herbicides
+    examples:
+    - value: "glyphosate 10 \uFFFDM, foliar spray, once at 2 weeks"
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000561
+    slot_uri: plant_tissue:herbicide_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  humidity_regimen:
+    name: humidity_regimen
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/humidity_regimen
+    description: Information about treatment involving an exposure to varying degree
+      of humidity
+    examples:
+    - value: 65% RH, constant
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000568
+    slot_uri: plant_tissue:humidity_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  radiation_regimen:
+    name: radiation_regimen
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/radiation_regimen
+    description: Information about treatment involving exposure to a particular radiation
+      regimen
+    examples:
+    - value: UV-B 1.5 W/m2, 2h/day, for 5 days starting at day 7
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000575
+    slot_uri: plant_tissue:radiation_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  light_regimen:
+    name: light_regimen
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/light_regimen
+    description: Information about treatment involving an exposure to light
+    examples:
+    - value: "150 \uFFFDmol m-2 s-1, 16h light / 8h dark"
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000569
+    slot_uri: plant_tissue:light_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  last_light_transition_type:
+    name: last_light_transition_type
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/last_light_transition_type
+    description: The most recent light transition before sampling
+    examples:
+    - value: lights on
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:last_light_transition_type
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  time_after_last_light_transition:
+    name: time_after_last_light_transition
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/time_after_last_light_transition
+    description: The time between sampling and the most recent light transition
+    examples:
+    - value: '2:00'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:time_after_last_light_transition
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  salt_regimen:
+    name: salt_regimen
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/salt_regimen
+    description: Information about treatment involving use of salts as supplement
+    examples:
+    - value: NaCl 100 mM added to hydroponic medium at day 3, followed by transfer
+        to fresh hydroponic medium without elevated NaCl for 3 days before sampling
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000582
+    slot_uri: plant_tissue:salt_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  rainfall_regimen:
+    name: rainfall_regimen
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/rainfall_regimen
+    description: Information about treatment involving an exposure to a given amount
+      of rainfall
+    examples:
+    - value: 30cm of rainfall during growing season
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000576
+    slot_uri: plant_tissue:rainfall_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  watering_regimen:
+    name: watering_regimen
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/watering_regimen
+    description: Information about treatment involving an exposure to watering frequencies
+    examples:
+    - value: 100 ml per pot every 3 days
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000591
+    slot_uri: plant_tissue:watering_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  other_treatment_regimen:
+    name: other_treatment_regimen
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/other_treatment_regimen
+    description: Information about treatments not captured by other available treatment
+      categories
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:other_treatment_regimen
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  perturbation:
+    name: perturbation
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/perturbation
+    description: Type of perturbation coupled with perturbation regimen
+    examples:
+    - value: drought stress beginning at 8 weeks for a period of 4 weeks
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000754
+    slot_uri: plant_tissue:perturbation
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  mechanical_damage:
+    name: mechanical_damage
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/mechanical_damage
+    description: Information about any mechanical damage exerted on the plant
+    examples:
+    - value: root wounding, 24h before sampling
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001052
+    slot_uri: plant_tissue:mechanical_damage
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  observed_host_symbionts:
+    name: observed_host_symbionts
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/observed_host_symbionts
+    description: The taxonomic name of organism(s) found living in symbiosis with
+      the specific host
+    examples:
+    - value: arbuscular mycorrhizal fungi
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001298
+    slot_uri: plant_tissue:observed_host_symbionts
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  plant_sex:
+    name: plant_sex
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/plant_sex
+    description: Sex of the reproductive parts on the whole plant
+    examples:
+    - value: hermaphrodite
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0001059
+    slot_uri: plant_tissue:plant_sex
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  sample_disease_status:
+    name: sample_disease_status
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/sample_disease_status
+    description: List of diseases with which the subject has been diagnosed at time
+      of sample collection
+    examples:
+    - value: infection with Pseudomonas syringae pv. tomato DC3000
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000031
+    slot_uri: plant_tissue:sample_disease_status
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  sample_disease_stage:
+    name: sample_disease_stage
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/sample_disease_stage
+    description: Stage of the disease at the time of sample collection
+    examples:
+    - value: infection
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000249
+    slot_uri: plant_tissue:sample_disease_stage
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  sample_material_processing:
+    name: sample_material_processing
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/sample_material_processing
+    description: A brief description of any processing applied to the sample
+    examples:
+    - value: roots were removed from pots rinsed with tap water before flash freezing
+        with liquid nitrogen
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000016
+    slot_uri: plant_tissue:sample_material_processing
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+  sample_storage_temperature_celsius:
+    name: sample_storage_temperature_celsius
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/sample_storage_temperature_celsius
+    description: Temperature at which sample was stored (in degrees Celsius)
+    examples:
+    - value: '-80'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    exact_mappings:
+    - mixs:0000110
+    slot_uri: plant_tissue:sample_storage_temperature_celsius
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+    pattern: ^[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?( *- *[-+]?[0-9]*\.?[0-9]+(?:[eE][-+]?[0-9]+)?)?
+      *([^\s-]{1,2}|[^\s-]+.+[^\s-]+)$
+  sample_preservation_method:
+    name: sample_preservation_method
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/sample_preservation_method
+    description: The method employed for preserving or fixing the tissue
+    examples:
+    - value: N2 Freeze
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:sample_preservation_method
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+    required: true
+  harvest_to_preservation_time:
+    name: harvest_to_preservation_time
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/harvest_to_preservation_time
+    description: The time between sampling and sample preservation, minutes
+    examples:
+    - value: '15'
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:harvest_to_preservation_time
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: string
+classes:
+  PlantTissueSample:
+    name: PlantTissueSample
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/PlantTissueSample
+    description: A sample of plant tissue with associated metadata
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slots:
+    - seq_project_id
+    - seq_project_name
+    - sample_id
+    - seq_project_pi_name
+    - sample_contact_name
+    - tissue_contact_name
+    - proposal_id
+    - tube_or_plate_label
+    - sample_container
+    - plate_location
+    - biosafety_material_category
+    - sample_name
+    - biological_replicate_sample_group_name
+    - combined_tissue_description
+    - experimental_time_point_number
+    - experimental_time_point_description
+    - genus
+    - species
+    - strain_variety_or_cultivar
+    - isolate
+    - germplasm_collection_and_id
+    - ncbi_taxonomy_id
+    - ancestral_data
+    - genetic_modification
+    - estimated_genome_size_mb
+    - gc_content_percent
+    - ploidy
+    - reference_genome
+    - collection_date_and_time
+    - sample_size
+    - tissue
+    - tissue_plant_ontology_term
+    - geographic_location_region_and_locality
+    - geographic_location_latitude
+    - geographic_location_longitude
+    - depth_meters
+    - elevation_meters
+    - temperature_celsius
+    - broad_scale_environmental_context
+    - local_environmental_context
+    - environmental_medium
+    - growth_facility
+    - growth_medium
+    - growth_medium_composition
+    - plant_age
+    - developmental_stage
+    - air_temperature_regimen
+    - antibiotic_regimen
+    - biotic_regimen
+    - inoculation_method
+    - time_post_inoculation
+    - chemical_administration
+    - chemical_mutagen
+    - fertilizer_administration
+    - insecticide_regimen
+    - fungicide_regimen
+    - gaseous_environment
+    - growth_hormone_regimen
+    - herbicide_regimen
+    - humidity_regimen
+    - radiation_regimen
+    - light_regimen
+    - last_light_transition_type
+    - time_after_last_light_transition
+    - salt_regimen
+    - rainfall_regimen
+    - watering_regimen
+    - other_treatment_regimen
+    - perturbation
+    - mechanical_damage
+    - observed_host_symbionts
+    - plant_sex
+    - sample_disease_status
+    - sample_disease_stage
+    - sample_material_processing
+    - sample_storage_temperature_celsius
+    - sample_preservation_method
+    - harvest_to_preservation_time
+    class_uri: plant_tissue:PlantTissueSample
+metamodel_version: 1.7.0
+source_file: plant_tissue_metadata_schema.yaml
+source_file_date: '2025-09-19T17:53:24'
+source_file_size: 20914
+generation_date: '2025-09-19T17:53:34'
+
