@@ -73,6 +73,10 @@ update: _update-template _update-linkml
 clean: _clean_project
   rm -rf tmp
   rm -rf {{docdir}}/*.md
+  @if [ -d "src/docs" ]; then \
+    echo "Removing copied source documentation files"; \
+    rm -f docs/*.md docs/*.png docs/*.jpg docs/*.jpeg docs/*.gif docs/*.svg 2>/dev/null || true; \
+  fi
 
 # (Re-)Generate project and documentation locally
 [group('model development')]
@@ -94,7 +98,7 @@ lint:
 
 # Generate md documentation for the schema
 [group('model development')]
-gen-doc: _gen-yaml
+gen-doc: _gen-yaml _copy-src-docs
   uv run gen-doc {{gen_doc_args}} -d {{docdir}} {{source_schema_path}}
 
 # Build docs and run test server
@@ -212,6 +216,18 @@ test-examples: _ensure_examples_output
 _gen-yaml:
   -mkdir -p docs/schema
   uv run gen-yaml {{source_schema_path}} > {{merged_schema_path}}
+
+# Copy source documentation files from src/docs to docs
+_copy-src-docs:
+  @if [ -d "src/docs" ]; then \
+    echo "Copying source documentation files from src/docs/ to docs/"; \
+    cp src/docs/*.md docs/ 2>/dev/null || true; \
+    cp src/docs/*.png docs/ 2>/dev/null || true; \
+    cp src/docs/*.jpg docs/ 2>/dev/null || true; \
+    cp src/docs/*.jpeg docs/ 2>/dev/null || true; \
+    cp src/docs/*.gif docs/ 2>/dev/null || true; \
+    cp src/docs/*.svg docs/ 2>/dev/null || true; \
+  fi
 
 # Run documentation server
 _serve:

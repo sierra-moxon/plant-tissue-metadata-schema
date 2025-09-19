@@ -1,8 +1,20 @@
 <a href="https://github.com/dalito/linkml-project-copier"><img src="https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-teal.json" alt="Copier Badge" style="max-width:100%;"/></a>
 
-# plant-tissue-metadata-schema
+# Plant Tissue Metadata Schema
 
-This is the project description.
+A LinkML schema for standardizing plant tissue sample metadata collection, developed by the Joint Genome Institute (JGI) to support **genomic innovation for a sustainable bioeconomy**.
+
+## Overview
+
+This schema enables researchers to capture comprehensive, standardized metadata about plant tissue samples, supporting the JGI's mission to advance environmental and energy genomics research. The schema aligns with MIXS standards and integrates with plant ontologies to ensure data interoperability and reuse.
+
+## Strategic Context
+
+This work supports the [JGI 2024 Strategic Plan](https://jgi.doe.gov/strategic-plan) strategic themes:
+- **Nutrient Cycling**: Understanding carbon and biogeochemical cycles
+- **Functional Diversity**: Characterizing plant functional traits
+- **Data and Connectivity**: Providing standardized data for AI/ML applications  
+- **Stewarding Resources**: Supporting the global research community
 
 ## Documentation Website
 
