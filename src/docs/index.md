@@ -10,7 +10,7 @@ The Plant Tissue Metadata Schema is a LinkML-based standardized schema for captu
 
 ## Documentation
 
-- [Schema Overview and Documentation](../../docs/elements/index.md)
+- [Schema Overview and Documentation](elements/index.md)
 - [About This Project](about.md)
 
 ## JGI Context
