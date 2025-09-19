@@ -112,6 +112,7 @@ jobs:
         run: |
           mkdir -p combined-site
           cp -r docs-site/* combined-site/
+          mkdir -p combined-site/harmonizer
           cp -r harmonizer-dist/* combined-site/harmonizer/
           
       - name: Upload combined pages artifact
