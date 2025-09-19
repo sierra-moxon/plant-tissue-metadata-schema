@@ -4,21 +4,30 @@
 
 A LinkML schema for standardizing plant tissue sample metadata collection, developed by the Joint Genome Institute (JGI) to support **genomic innovation for a sustainable bioeconomy**.
 
+
+![JGI Logo](jgi_logo.png)
+
+**A DOE Office of Science User Facility Initiative**
+
 ## Overview
 
-This schema enables researchers to capture comprehensive, standardized metadata about plant tissue samples, supporting the JGI's mission to advance environmental and energy genomics research. The schema aligns with MIXS standards and integrates with plant ontologies to ensure data interoperability and reuse.
+The Plant Tissue Metadata Schema is a LinkML-based standardized schema for capturing comprehensive metadata about plant tissue samples. This schema supports the Joint Genome Institute's mission to **lead genomic innovation for a sustainable bioeconomy** by enabling reproducible, interoperable plant genomics research.
 
-## Strategic Context
+## Documentation
 
-This work supports the [JGI 2024 Strategic Plan](https://jgi.doe.gov/strategic-plan) strategic themes:
-- **Nutrient Cycling**: Understanding carbon and biogeochemical cycles
-- **Functional Diversity**: Characterizing plant functional traits
-- **Data and Connectivity**: Providing standardized data for AI/ML applications  
-- **Stewarding Resources**: Supporting the global research community
+- [Schema Overview and Documentation](../../docs/elements/index.md)
+- [About This Project](about.md)
 
-## Documentation Website
+## JGI Context
 
-[https://sierra-moxon.github.io/plant-tissue-metadata-schema](https://sierra-moxon.github.io/plant-tissue-metadata-schema)
+This schema aligns with the JGI 2024 Strategic Plan's focus on:
+
+- **Nutrient Cycling**: Understanding biological drivers of carbon and biogeochemical cycles
+- **Functional Diversity**: Characterizing functional traits across plant species in DOE-relevant ecosystems  
+- **Data and Connectivity**: Providing standardized, high-quality data for AI/ML applications
+- **Stewarding Resources**: Supporting the global research community with professional expertise
+
+By standardizing plant tissue metadata collection, this schema enables researchers to contribute to transformative research addressing environmental and energy challenges in support of a sustainable bioeconomy.
 
 ## Repository Structure
 
