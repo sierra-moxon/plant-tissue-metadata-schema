@@ -24,14 +24,6 @@ This schema provides:
 - FAIR (Findable, Accessible, Interoperable, Reusable) data principles
 - Integration with existing standards (MIXS, plant ontologies)
 
-## Bioeconomy Applications
-
-The standardized metadata supports research into:
-- **Climate Solutions**: Understanding plant responses to environmental changes
-- **Sustainable Materials**: Developing bio-based alternatives to fossil fuel products  
-- **Food Security**: Optimizing crop resilience and productivity
-- **Carbon Management**: Leveraging plants for atmospheric carbon removal
-
 ## Technical Implementation
 
 Built using LinkML (Linked data Modeling Language), this schema:
@@ -42,10 +34,9 @@ Built using LinkML (Linked data Modeling Language), this schema:
 
 ## Community Impact
 
-This work exemplifies the JGI's role as a DOE Office of Science user facility by:
-- Serving over 2,300 primary users with standardized data collection
-- Supporting 20,000+ secondary users through improved data accessibility
-- Enabling countless researchers to advance DOE science mission goals
-- Fostering collaborative genome science for environmental solutions
+By standardizing plant tissue metadata collection, this schema:
+- Facilitates reproducible research and data reuse.
+- Supports collaborative research across institutions.
+- Enhances data sharing and integration in plant genomics.
 
 For more information about JGI's strategic vision, see the [JGI 2024 Strategic Plan](https://jgi.doe.gov/strategic-plan).

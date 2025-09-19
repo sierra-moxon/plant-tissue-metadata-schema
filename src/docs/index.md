@@ -8,7 +8,12 @@
 
 The Plant Tissue Metadata Schema is a LinkML-based standardized schema for capturing comprehensive metadata about plant tissue samples. This schema supports the Joint Genome Institute's mission to **lead genomic innovation for a sustainable bioeconomy** by enabling reproducible, interoperable plant genomics research.
 
-## Strategic Context
+## Documentation
+
+- [Schema Overview and Documentation](../../docs/elements/index.md)
+- [About This Project](about.md)
+
+## JGI Context
 
 This schema aligns with the JGI 2024 Strategic Plan's focus on:
 
@@ -19,7 +24,3 @@ This schema aligns with the JGI 2024 Strategic Plan's focus on:
 
 By standardizing plant tissue metadata collection, this schema enables researchers to contribute to transformative research addressing environmental and energy challenges in support of a sustainable bioeconomy.
 
-## Documentation
-
-- [Schema Overview and Documentation](../../docs/elements/index.md)
-- [About This Project](about.md)
