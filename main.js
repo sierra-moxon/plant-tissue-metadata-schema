@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
   new Footer(dhFooterRoot, dh);
   new Toolbar(dhToolbarRoot, dh, menu, {
     getSchema: async (schema) => {
-      return (await import(`./schemas/${schema}.json`)).default
+      const response = await fetch(`./schemas/${schema}.json`);
+      return await response.json();
     },
   });
 });

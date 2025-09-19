@@ -54,6 +54,9 @@ jobs:
           uv run gen-linkml --materialize-patterns --materialize-attributes src/plant_tissue_metadata_schema/schema/plant_tissue_metadata_schema.yaml > docs/schemas/plant-tissue-metadata-schema.json
           cp menu.json docs/
           uv run mkdocs build
+          mkdir -p site/schemas
+          cp docs/schemas/plant-tissue-metadata-schema.json site/schemas/
+          cp docs/menu.json site/
           
       - name: Upload docs artifact
         uses: actions/upload-artifact@v4
