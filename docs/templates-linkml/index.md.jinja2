@@ -1,0 +1,79 @@
+# {% if schema.title %}{{ schema.title }}{% else %}{{ schema.name }}{% endif %}
+
+![JGI Logo](../jgi_logo.png)
+
+**Joint Genome Institute - A DOE Office of Science User Facility**
+
+{% if schema.description %}{{ schema.description }}{% endif %}
+
+## Documentation
+
+- [Schema Overview and Documentation](index.md)
+- [About This Project](../about.md)
+
+## Strategic Context
+
+This schema supports JGI's mission to **lead genomic innovation for a sustainable bioeconomy** 
+by providing standardized metadata collection for plant tissue samples, enabling reproducible 
+research and data reuse across the scientific community.
+
+**Schema Details:**
+- **URI**: {{ schema.id }}
+- **Name**: {{ schema.name }}
+- **Compatible with**: MIXS standards and plant ontologies
+- **Use Case**: Plant genomics research supporting environmental and energy applications
+
+{% if include_top_level_diagram %}
+
+## Schema Diagram
+
+```{{ gen.mermaid_directive() }}
+{{ gen.mermaid_diagram() }}
+```
+{% endif %}
+
+## Classes
+
+| Class | Description |
+| --- | --- |
+{% if gen.hierarchical_class_view -%}
+{% for u, v in gen.class_hierarchy_as_tuples() -%}
+| {{ "&nbsp;"|safe*u*8 }}{{ gen.link(schemaview.get_class(v), True) }} | {{ schemaview.get_class(v).description|enshorten }} |
+{% endfor %}
+{% else -%}
+{% for c in gen.all_class_objects()|sort(attribute=sort_by) -%}
+| {{ gen.link(c, True) }} | {{ c.description|enshorten }} |
+{% endfor %}
+{% endif %}
+
+## Slots
+
+| Slot | Description |
+| --- | --- |
+{% for s in gen.all_slot_objects()|sort(attribute=sort_by) -%}
+| {{ gen.link(s, True) }} | {{ s.description|enshorten }} |
+{% endfor %}
+
+## Enumerations
+
+| Enumeration | Description |
+| --- | --- |
+{% for e in gen.all_enum_objects()|sort(attribute=sort_by) -%}
+| {{ gen.link(e, True) }} | {{ e.description|enshorten }} |
+{% endfor %}
+
+## Types
+
+| Type | Description |
+| --- | --- |
+{% for t in gen.all_type_objects()|sort(attribute=sort_by) -%}
+| {{ gen.link(t, True) }} | {{ t.description|enshorten }} |
+{% endfor %}
+
+## Subsets
+
+| Subset | Description |
+| --- | --- |
+{% for ss in schemaview.all_subsets().values()|sort(attribute='name') -%}
+| {{ gen.link(ss, True) }} | {{ ss.description|enshorten }} |
+{% endfor %}
