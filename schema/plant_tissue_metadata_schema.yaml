@@ -18,8 +18,8 @@ prefixes:
   plant_tissue:
     prefix_prefix: plant_tissue
     prefix_reference: https://w3id.org/plant-tissue-metadata-schema/
-  mixs:
-    prefix_prefix: mixs
+  MIXS:
+    prefix_prefix: MIXS
     prefix_reference: https://w3id.org/mixs/
   PO:
     prefix_prefix: PO
@@ -1482,7 +1482,7 @@ classes:
     class_uri: plant_tissue:PlantTissueSample
 metamodel_version: 1.7.0
 source_file: plant_tissue_metadata_schema.yaml
-source_file_date: '2025-09-19T21:06:33'
+source_file_date: '2025-09-19T21:08:23'
 source_file_size: 31118
-generation_date: '2025-09-19T21:06:42'
+generation_date: '2025-09-19T21:08:40'
 
