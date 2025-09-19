@@ -26,14 +26,19 @@ jobs:
       - name: Install UV
         run: curl -LsSf https://astral.sh/uv/install.sh | sh
         
+      - name: Install Just
+        run: curl --proto '=https' --tlsv1.2 -sSf https://just.systems/install.sh | bash -s -- --to ~/.local/bin
+        
       - name: Install dependencies
         run: |
           source $HOME/.cargo/env
+          export PATH="$HOME/.local/bin:$PATH"
           uv sync --group dev
           
       - name: Generate documentation
         run: |
           source $HOME/.cargo/env
+          export PATH="$HOME/.local/bin:$PATH"
           uv run just gen-doc
           
       - name: Upload docs artifact
