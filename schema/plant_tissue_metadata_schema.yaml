@@ -304,6 +304,19 @@ types:
     base: str
     uri: xsd:string
     repr: str
+enums:
+  TestValueEnum:
+    name: TestValueEnum
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/TestValueEnum
+    description: An example enumeration for testing purposes
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    permissible_values:
+      test1:
+        text: test1
+      test2:
+        text: test2
+      test3:
+        text: test3
 slots:
   seq_project_id:
     name: seq_project_id
@@ -589,7 +602,7 @@ slots:
     owner: PlantTissueSample
     domain_of:
     - PlantTissueSample
-    range: integer
+    range: uriorcurie
     required: true
   ancestral_data:
     name: ancestral_data
@@ -1394,6 +1407,15 @@ slots:
     domain_of:
     - PlantTissueSample
     range: string
+  test_value:
+    name: test_value
+    definition_uri: https://w3id.org/plant-tissue-metadata-schema/test_value
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    slot_uri: plant_tissue:test_value
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: TestValueEnum
 classes:
   PlantTissueSample:
     name: PlantTissueSample
@@ -1479,10 +1501,11 @@ classes:
     - sample_storage_temperature_celsius
     - sample_preservation_method
     - harvest_to_preservation_time
+    - test_value
     class_uri: plant_tissue:PlantTissueSample
 metamodel_version: 1.7.0
 source_file: plant_tissue_metadata_schema.yaml
-source_file_date: '2025-10-21T15:05:18'
-source_file_size: 31118
-generation_date: '2025-10-21T15:05:26'
+source_file_date: '2025-10-21T15:18:25'
+source_file_size: 31390
+generation_date: '2025-10-21T15:18:35'
 

@@ -367,6 +367,17 @@
 
       PlantTissueSample : temperature_celsius
 
+      PlantTissueSample : test_value
+
+
+
+
+
+        PlantTissueSample --&gt; "0..1" TestValueEnum : test_value
+        click TestValueEnum href "../TestValueEnum/"
+
+
+
       PlantTissueSample : time_after_last_light_transition
 
       PlantTissueSample : time_post_inoculation
@@ -523,7 +534,7 @@
 </tr>
 <tr>
 <td><a href="../ncbi_taxonomy_id/">ncbi_taxonomy_id</a></td>
-<td>1 <br/> <a href="../Integer/">Integer</a></td>
+<td>1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
 <td>Unique identifier from the NCBI taxonomy database</td>
 <td>direct</td>
 </tr>
@@ -863,6 +874,12 @@
 <td>The time between sampling and sample preservation, minutes</td>
 <td>direct</td>
 </tr>
+<tr>
+<td><a href="../test_value/">test_value</a></td>
+<td>0..1 <br/> <a href="../TestValueEnum/">TestValueEnum</a></td>
+<td></td>
+<td>direct</td>
+</tr>
 </tbody>
 </table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
@@ -975,6 +992,7 @@ slots:
 - sample_storage_temperature_celsius
 - sample_preservation_method
 - harvest_to_preservation_time
+- test_value
 
 </code></pre>
 </details>
@@ -1268,7 +1286,7 @@ attributes:
     owner: PlantTissueSample
     domain_of:
     - PlantTissueSample
-    range: integer
+    range: uriorcurie
     required: true
   ancestral_data:
     name: ancestral_data
@@ -2073,6 +2091,15 @@ attributes:
     domain_of:
     - PlantTissueSample
     range: string
+  test_value:
+    name: test_value
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    rank: 1000
+    alias: test_value
+    owner: PlantTissueSample
+    domain_of:
+    - PlantTissueSample
+    range: TestValueEnum
 
 </code></pre>
 </details>
