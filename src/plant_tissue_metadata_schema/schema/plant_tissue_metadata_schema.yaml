@@ -35,6 +35,18 @@ prefixes:
     prefix_reference: http://identifiers.org/orcid/
 default_prefix: plant_tissue
 default_range: string
+enums:
+  TestValueEnum:
+    name: TestValueEnum
+    description: An example enumeration for testing purposes
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
+    permissible_values:
+      test1:
+        text: test1
+      test2:
+        text: test2
+      test3:
+        text: test3
 slots:
   seq_project_id:
     name: seq_project_id
@@ -892,9 +904,12 @@ slots:
     - PlantTissueSample
     range: string
   test_value:
-    range: TestValueEnum
+    name: test_value
+    description: An example enumerated value for testing purposes
+    from_schema: https://w3id.org/plant-tissue-metadata-schema
     domain_of:
-      - PlantTissueSample
+    - PlantTissueSample
+    range: TestValueEnum
 classes:
   PlantTissueSample:
     name: PlantTissueSample
@@ -981,11 +996,3 @@ classes:
     - harvest_to_preservation_time
     - test_value
 source_file: /Users/SMoxon/Documents/src/plant-tissue-metadata-schema/src/plant_tissue_metadata_schema/schema/plant_tissue_metadata_schema.yaml
-enums:
-  TestValueEnum:
-    name: TestValueEnum
-    description: An example enumeration for testing purposes
-    permissible_values:
-      test1:
-      test2:
-      test3:
