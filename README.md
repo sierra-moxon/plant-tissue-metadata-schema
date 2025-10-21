@@ -46,8 +46,69 @@ By standardizing plant tissue metadata collection, this schema enables researche
 
 ## Developer Tools
 
-There are several pre-defined command-recipes available.
-They are written for the command runner [just](https://github.com/casey/just/). To list all pre-defined commands, run `just` or `just --list`.
+This project uses [just](https://github.com/casey/just/) as a command runner for common development tasks. To list all available commands, run `just` or `just --list`.
+
+### Setting up a Development Environment
+
+1. **Install dependencies**:
+   ```bash
+   just install
+   ```
+   This installs all required Python packages using `uv`.
+
+2. **Generate initial project files**:
+   ```bash
+   just gen-project
+   ```
+   This generates Python models, Java classes, OWL, and TypeScript representations from the schema.
+
+### Making Schema Changes
+
+1. **Edit the schema**: Make your changes to the LinkML schema files in `src/plant_tissue_metadata_schema/schema/`
+
+2. **Lint your schema** (optional but recommended):
+   ```bash
+   just lint        # Check for issues
+   just lint-fix    # Auto-fix issues where possible
+   ```
+
+3. **Test your schema changes**:
+   ```bash
+   just gen-project
+   ```
+   This command regenerates all project files from your updated schema. If it runs without errors, your schema changes are syntactically valid.
+
+4. **Run comprehensive tests**:
+   ```bash
+   just test
+   ```
+   This runs schema validation, Python unit tests, and example validation.
+
+### Local Development and Testing
+
+To deploy the data harmonizer and documentation locally for testing:
+
+1. **Build and serve the documentation with data harmonizer**:
+   ```bash
+   just testdoc
+   ```
+   This command:
+   - Generates documentation from the schema
+   - Builds the data harmonizer web interface
+   - Copies harmonizer assets to the docs directory
+   - Generates a JSON schema for the harmonizer
+   - Starts a local development server (typically at http://localhost:8000)
+
+2. **View your changes**:
+   - Documentation will be available at http://localhost:8000
+   - The data harmonizer interface will be at http://localhost:8000/harmonizer.html
+
+### Other Useful Commands
+
+- `just site` - Generate project files and documentation without starting a server
+- `just gen-doc` - Generate only the markdown documentation
+- `just test-examples` - Validate example data against the schema
+- `just clean` - Remove all generated files
 
 ## Credits
 
