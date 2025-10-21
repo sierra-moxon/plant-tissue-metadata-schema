@@ -891,6 +891,10 @@ slots:
     domain_of:
     - PlantTissueSample
     range: string
+  test_value:
+    range: TestValueEnum
+    domain_of:
+      - PlantTissueSample
 classes:
   PlantTissueSample:
     name: PlantTissueSample
@@ -975,4 +979,13 @@ classes:
     - sample_storage_temperature_celsius
     - sample_preservation_method
     - harvest_to_preservation_time
+    - test_value
 source_file: /Users/SMoxon/Documents/src/plant-tissue-metadata-schema/src/plant_tissue_metadata_schema/schema/plant_tissue_metadata_schema.yaml
+enums:
+  TestValueEnum:
+    name: TestValueEnum
+    description: An example enumeration for testing purposes
+    permissible_values:
+      test1:
+      test2:
+      test3:

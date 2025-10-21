@@ -89,6 +89,15 @@ linkml_meta = LinkMLMeta({'default_prefix': 'plant_tissue',
      'source_file': 'src/plant_tissue_metadata_schema/schema/plant_tissue_metadata_schema.yaml',
      'title': 'Plant Tissue Metadata Schema'} )
 
+class TestValueEnum(str, Enum):
+    """
+    An example enumeration for testing purposes
+    """
+    test1 = "test1"
+    test2 = "test2"
+    test3 = "test3"
+
+
 
 class PlantTissueSample(ConfiguredBaseModel):
     """
@@ -383,6 +392,7 @@ class PlantTissueSample(ConfiguredBaseModel):
     harvest_to_preservation_time: Optional[str] = Field(default=None, description="""The time between sampling and sample preservation, minutes""", json_schema_extra = { "linkml_meta": {'alias': 'harvest_to_preservation_time',
          'domain_of': ['PlantTissueSample'],
          'examples': [{'value': '15'}]} })
+    test_value: Optional[TestValueEnum] = Field(default=None, json_schema_extra = { "linkml_meta": {'alias': 'test_value', 'domain_of': ['PlantTissueSample']} })
 
     @field_validator('genetic_modification')
     def pattern_genetic_modification(cls, v):

@@ -1,5 +1,5 @@
 # Auto generated from plant_tissue_metadata_schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-10-21T08:09:32
+# Generation date: 2025-10-21T08:16:21
 # Schema: plant-tissue-metadata-schema
 #
 # id: https://w3id.org/plant-tissue-metadata-schema
@@ -170,6 +170,7 @@ class PlantTissueSample(YAMLRoot):
     sample_disease_stage: Optional[str] = None
     sample_material_processing: Optional[str] = None
     harvest_to_preservation_time: Optional[str] = None
+    test_value: Optional[Union[str, "TestValueEnum"]] = None
 
     def __post_init__(self, *_: str, **kwargs: Any):
         if self._is_empty(self.seq_project_id):
@@ -452,11 +453,25 @@ class PlantTissueSample(YAMLRoot):
         if self.harvest_to_preservation_time is not None and not isinstance(self.harvest_to_preservation_time, str):
             self.harvest_to_preservation_time = str(self.harvest_to_preservation_time)
 
+        if self.test_value is not None and not isinstance(self.test_value, TestValueEnum):
+            self.test_value = TestValueEnum(self.test_value)
+
         super().__post_init__(**kwargs)
 
 
 # Enumerations
+class TestValueEnum(EnumDefinitionImpl):
+    """
+    An example enumeration for testing purposes
+    """
+    test1 = PermissibleValue(text="test1")
+    test2 = PermissibleValue(text="test2")
+    test3 = PermissibleValue(text="test3")
 
+    _defn = EnumDefinition(
+        name="TestValueEnum",
+        description="An example enumeration for testing purposes",
+    )
 
 # Slots
 class slots:
@@ -707,3 +722,6 @@ slots.sample_preservation_method = Slot(uri=PLANT_TISSUE.sample_preservation_met
 
 slots.harvest_to_preservation_time = Slot(uri=PLANT_TISSUE.harvest_to_preservation_time, name="harvest_to_preservation_time", curie=PLANT_TISSUE.curie('harvest_to_preservation_time'),
                    model_uri=PLANT_TISSUE.harvest_to_preservation_time, domain=None, range=Optional[str])
+
+slots.test_value = Slot(uri=PLANT_TISSUE.test_value, name="test_value", curie=PLANT_TISSUE.curie('test_value'),
+                   model_uri=PLANT_TISSUE.test_value, domain=None, range=Optional[Union[str, "TestValueEnum"]])
