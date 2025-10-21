@@ -1482,7 +1482,7 @@ classes:
     class_uri: plant_tissue:PlantTissueSample
 metamodel_version: 1.7.0
 source_file: plant_tissue_metadata_schema.yaml
-source_file_date: '2025-10-21T15:00:41'
+source_file_date: '2025-10-21T15:05:18'
 source_file_size: 31118
-generation_date: '2025-10-21T15:00:51'
+generation_date: '2025-10-21T15:05:26'
 
