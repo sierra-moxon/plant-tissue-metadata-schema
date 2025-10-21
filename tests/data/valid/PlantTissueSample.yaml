@@ -26,7 +26,7 @@ species: "bicolor"
 strain_variety_or_cultivar: "RTx430"
 isolate: "SB_line1"
 germplasm_collection_and_id: "GRIN PI 123456"
-ncbi_taxonomy_id: 4558
+ncbi_taxonomy_id: NCBITaxon:4558
 ancestral_data: "Pure line breeding from landrace"
 estimated_genome_size_mb: 730
 gc_content_percent: 45

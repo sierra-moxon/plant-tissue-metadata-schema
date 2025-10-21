@@ -1,5 +1,5 @@
 # Auto generated from plant_tissue_metadata_schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2025-09-19T13:42:47
+# Generation date: 2025-10-21T08:09:32
 # Schema: plant-tissue-metadata-schema
 #
 # id: https://w3id.org/plant-tissue-metadata-schema
@@ -57,18 +57,19 @@ from rdflib import (
     URIRef
 )
 
-from linkml_runtime.linkml_model.types import Float, Integer, String
+from linkml_runtime.linkml_model.types import Float, Integer, String, Uriorcurie
+from linkml_runtime.utils.metamodelcore import URIorCURIE
 
 metamodel_version = "1.7.0"
 version = None
 
 # Namespaces
 ENVO = CurieNamespace('ENVO', 'http://purl.obolibrary.org/obo/ENVO_')
+MIXS = CurieNamespace('MIXS', 'https://w3id.org/mixs/')
 ORCID = CurieNamespace('ORCID', 'http://identifiers.org/orcid/')
 PATO = CurieNamespace('PATO', 'http://purl.obolibrary.org/obo/PATO_')
 PO = CurieNamespace('PO', 'http://purl.obolibrary.org/obo/PO_')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
-MIXS = CurieNamespace('mixs', 'https://w3id.org/mixs/')
 PLANT_TISSUE = CurieNamespace('plant_tissue', 'https://w3id.org/plant-tissue-metadata-schema/')
 DEFAULT_ = PLANT_TISSUE
 
@@ -103,7 +104,7 @@ class PlantTissueSample(YAMLRoot):
     genus: str = None
     species: str = None
     strain_variety_or_cultivar: str = None
-    ncbi_taxonomy_id: int = None
+    ncbi_taxonomy_id: Union[str, URIorCURIE] = None
     reference_genome: str = None
     collection_date_and_time: str = None
     sample_size: str = None
@@ -233,8 +234,8 @@ class PlantTissueSample(YAMLRoot):
 
         if self._is_empty(self.ncbi_taxonomy_id):
             self.MissingRequiredField("ncbi_taxonomy_id")
-        if not isinstance(self.ncbi_taxonomy_id, int):
-            self.ncbi_taxonomy_id = int(self.ncbi_taxonomy_id)
+        if not isinstance(self.ncbi_taxonomy_id, URIorCURIE):
+            self.ncbi_taxonomy_id = URIorCURIE(self.ncbi_taxonomy_id)
 
         if self._is_empty(self.reference_genome):
             self.MissingRequiredField("reference_genome")
@@ -525,7 +526,7 @@ slots.germplasm_collection_and_id = Slot(uri=PLANT_TISSUE.germplasm_collection_a
                    model_uri=PLANT_TISSUE.germplasm_collection_and_id, domain=None, range=Optional[str])
 
 slots.ncbi_taxonomy_id = Slot(uri=PLANT_TISSUE.ncbi_taxonomy_id, name="ncbi_taxonomy_id", curie=PLANT_TISSUE.curie('ncbi_taxonomy_id'),
-                   model_uri=PLANT_TISSUE.ncbi_taxonomy_id, domain=None, range=int)
+                   model_uri=PLANT_TISSUE.ncbi_taxonomy_id, domain=None, range=Union[str, URIorCURIE])
 
 slots.ancestral_data = Slot(uri=PLANT_TISSUE.ancestral_data, name="ancestral_data", curie=PLANT_TISSUE.curie('ancestral_data'),
                    model_uri=PLANT_TISSUE.ancestral_data, domain=None, range=Optional[str])

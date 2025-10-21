@@ -23,7 +23,7 @@ experimental_time_point_description: "6 hours post auxin treatment"
 genus: "Zea"
 species: "mays"
 strain_variety_or_cultivar: "B73"
-ncbi_taxonomy_id: 4577
+ncbi_taxonomy_id: NCBITaxon:4577
 estimated_genome_size_mb: 2300
 gc_content_percent: 47
 ploidy: "diploid [PATO:0001374]"

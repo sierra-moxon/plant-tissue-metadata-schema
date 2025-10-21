@@ -25,7 +25,7 @@ genus: "Arabidopsis"
 species: "thaliana"
 strain_variety_or_cultivar: "Col-0"
 germplasm_collection_and_id: "ABRC CS22660"
-ncbi_taxonomy_id: 3702
+ncbi_taxonomy_id: NCBITaxon:3702
 ploidy: "diploid [PATO:0001374]"
 reference_genome: "TAIR Arabidopsis thaliana Col-0 TAIR10"
 

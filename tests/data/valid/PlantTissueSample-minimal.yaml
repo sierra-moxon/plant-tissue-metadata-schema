@@ -15,7 +15,7 @@ sample_name: "minimal_plant_sample"
 genus: "Arabidopsis"
 species: "thaliana"
 strain_variety_or_cultivar: "Col-0"
-ncbi_taxonomy_id: 3702
+ncbi_taxonomy_id: NCBITaxon:3702
 reference_genome: "TAIR10"
 
 # Required collection info

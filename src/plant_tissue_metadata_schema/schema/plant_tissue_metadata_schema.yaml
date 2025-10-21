@@ -254,7 +254,7 @@ slots:
     - MIXS:0000250
     domain_of:
     - PlantTissueSample
-    range: integer
+    range: uriorcurie
     required: true
   ancestral_data:
     name: ancestral_data

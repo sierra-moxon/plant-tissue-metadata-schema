@@ -23,7 +23,7 @@ experimental_time_point_description: "milk stage, 14 days post anthesis"
 genus: "Oryza"
 species: "sativa"
 strain_variety_or_cultivar: "Nipponbare"
-ncbi_taxonomy_id: 4530
+ncbi_taxonomy_id: NCBITaxon:4530
 estimated_genome_size_mb: 430
 gc_content_percent: 44
 ploidy: "diploid [PATO:0001374]"
