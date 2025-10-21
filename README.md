@@ -48,6 +48,24 @@ By standardizing plant tissue metadata collection, this schema enables researche
 
 This project uses [just](https://github.com/casey/just/) as a command runner for common development tasks. To list all available commands, run `just` or `just --list`.
 
+### Prerequisites
+
+Before setting up the development environment, ensure you have the following tools installed:
+
+1. **just** - Command runner
+   - macOS: `brew install just`
+   - Linux: Check [just installation docs](https://github.com/casey/just#installation)
+   - Windows: `scoop install just` or download from [releases](https://github.com/casey/just/releases)
+
+2. **uv** - Python package installer
+   - All platforms: `curl -LsSf https://astral.sh/uv/install.sh | sh`
+   - Or via pip: `pip install uv`
+   - See [uv documentation](https://github.com/astral-sh/uv) for more options
+
+3. **npm** (Node.js) - Required for building the data harmonizer interface
+   - Download from [nodejs.org](https://nodejs.org/) (LTS version recommended)
+   - Or use a version manager like [nvm](https://github.com/nvm-sh/nvm) or [fnm](https://github.com/Schniz/fnm)
+
 ### Setting up a Development Environment
 
 1. **Install dependencies**:
@@ -56,7 +74,13 @@ This project uses [just](https://github.com/casey/just/) as a command runner for
    ```
    This installs all required Python packages using `uv`.
 
-2. **Generate initial project files**:
+2. **Install npm dependencies** (for data harmonizer):
+   ```bash
+   npm install
+   ```
+   This installs the JavaScript dependencies needed to build the data harmonizer interface.
+
+3. **Generate initial project files**:
    ```bash
    just gen-project
    ```
