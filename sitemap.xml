@@ -2,410 +2,410 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/about/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Boolean/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Curie/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Date/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/DateOrDatetime/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Datetime/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Decimal/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Double/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Float/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Integer/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Jsonpath/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Jsonpointer/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Ncname/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Nodeidentifier/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Objectidentifier/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/PlantTissueSample/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Sparqlpath/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/String/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Time/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Uri/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/Uriorcurie/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/air_temperature_regimen/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/ancestral_data/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/antibiotic_regimen/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/biological_replicate_sample_group_name/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/biosafety_material_category/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/biotic_regimen/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/broad_scale_environmental_context/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/chemical_administration/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/chemical_mutagen/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/collection_date_and_time/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/combined_tissue_description/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/depth_meters/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/developmental_stage/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/elevation_meters/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/environmental_medium/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/estimated_genome_size_mb/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/experimental_time_point_description/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/experimental_time_point_number/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/fertilizer_administration/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/fungicide_regimen/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/gaseous_environment/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/gc_content_percent/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/genetic_modification/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/genus/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/geographic_location_latitude/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/geographic_location_longitude/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/geographic_location_region_and_locality/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/germplasm_collection_and_id/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/growth_facility/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/growth_hormone_regimen/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/growth_medium/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/growth_medium_composition/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/harvest_to_preservation_time/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/herbicide_regimen/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/humidity_regimen/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/inoculation_method/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/insecticide_regimen/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/isolate/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/last_light_transition_type/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/light_regimen/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/local_environmental_context/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/mechanical_damage/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/ncbi_taxonomy_id/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/observed_host_symbionts/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/other_treatment_regimen/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/perturbation/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/plant-tissue-metadata-schema/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/plant_age/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/plant_sex/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/plate_location/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/ploidy/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/proposal_id/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/radiation_regimen/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/rainfall_regimen/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/reference_genome/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/salt_regimen/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/sample_contact_name/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/sample_container/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/sample_disease_stage/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/sample_disease_status/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/sample_id/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/sample_material_processing/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/sample_name/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/sample_preservation_method/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/sample_size/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/sample_storage_temperature_celsius/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/seq_project_id/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/seq_project_name/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/seq_project_pi_name/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/species/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/strain_variety_or_cultivar/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/temperature_celsius/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/time_after_last_light_transition/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/time_post_inoculation/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/tissue/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/tissue_contact_name/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/tissue_plant_ontology_term/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/tube_or_plate_label/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
     <url>
          <loc>https://sierra-moxon.github.io/plant-tissue-metadata-schema/elements/watering_regimen/</loc>
-         <lastmod>2025-09-19</lastmod>
+         <lastmod>2025-10-21</lastmod>
     </url>
 </urlset>
